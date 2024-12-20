@@ -1,0 +1,911 @@
+# Futurama Script disassembler
+# Loaded debug symbols '/home/kmr1/Futuramalib/Futurama/scripts/level1-1.dbg' (Target script: 'Futurama')
+# 1: {'name': 'native_class', 'members': []}
+# 2: {'name': 'reference', 'members': []}
+# 3: {'name': 'void', 'members': []}
+# 4: {'name': 'int', 'members': []}
+# 5: {'name': 'float', 'members': []}
+# 6: {'name': 'bool', 'members': []}
+# 7: {'name': 'string', 'members': [{'name': '@@Reserved@@', 'offset': 0, 'type': 1}]}
+# 8: {'name': 'FuPoint3', 'members': [{'name': 'x', 'offset': 0, 'type': 5}, {'name': 'y', 'offset': 4, 'type': 5}, {'name': 'z', 'offset': 8, 'type': 5}]}
+# 9: {'name': 'Color', 'members': [{'name': 'r', 'offset': 0, 'type': 5}, {'name': 'g', 'offset': 4, 'type': 5}, {'name': 'b', 'offset': 8, 'type': 5}]}
+# 10: {'name': 'FsTank', 'members': [{'name': '@@Reserved@@', 'offset': 0, 'type': 1}]}
+# 11: {'name': 'FsCannonCtrl', 'members': [{'name': '@@Reserved@@', 'offset': 0, 'type': 1}]}
+# 12: {'name': 'Trigger', 'members': [{'name': '@@Reserved@@', 'offset': 0, 'type': 1}]}
+# 13: {'name': 'LevelInfo', 'members': [{'name': 'm_iLevel', 'offset': 0, 'type': 4}, {'name': 'm_iStage', 'offset': 4, 'type': 4}]}
+# 14: {'name': 'FsParticleDef', 'members': [{'name': '@@Reserved@@', 'offset': 0, 'type': 1}]}
+# 15: {'name': 'FsParticle3dDef', 'members': [{'name': '@@Reserved@@', 'offset': 0, 'type': 1}]}
+# 16: {'name': 'FsFireCircleDef', 'members': [{'name': '@@Reserved@@', 'offset': 0, 'type': 1}]}
+# 17: {'name': 'AIProfile', 'members': [{'name': 'm_bAggressive', 'offset': 0, 'type': 6}, {'name': 'm_fVisualField', 'offset': 4, 'type': 5}, {'name': 'm_fVisualRange', 'offset': 8, 'type': 5}, {'name': 'm_fAudioRange', 'offset': 12, 'type': 5}, {'name': '__Reserved_0__', 'offset': 16, 'type': 5}, {'name': '__Reserved_1__', 'offset': 20, 'type': 5}, {'name': 'm_eImpulsive', 'offset': 24, 'type': 4}, {'name': 'm_nWarpPoints', 'offset': 28, 'type': 4}, {'name': 'm_fSummonWait', 'offset': 32, 'type': 5}, {'name': 'm_bAllowMove', 'offset': 36, 'type': 6}, {'name': 'm_bAllowRotate', 'offset': 40, 'type': 6}, {'name': 'm_bWeasleMove', 'offset': 44, 'type': 6}, {'name': 'm_bCrocMove', 'offset': 48, 'type': 6}, {'name': 'm_bControlCannon', 'offset': 52, 'type': 6}, {'name': 'm_bCloseCombat', 'offset': 56, 'type': 6}, {'name': 'm_bRangedCombat', 'offset': 60, 'type': 6}, {'name': '__Reserved_2__', 'offset': 64, 'type': 6}, {'name': 'm_bAggroFriends', 'offset': 68, 'type': 6}, {'name': 'm_fCloseReach', 'offset': 72, 'type': 5}, {'name': 'm_fRangedReach', 'offset': 76, 'type': 5}, {'name': '__Reserved_4__', 'offset': 80, 'type': 5}, {'name': '__Reserved_5__', 'offset': 84, 'type': 5}, {'name': 'm_fAimSpeed', 'offset': 88, 'type': 5}, {'name': 'm_fFiringRate', 'offset': 92, 'type': 5}, {'name': 'm_fFiringDuration', 'offset': 96, 'type': 5}, {'name': 'm_fCoolDown', 'offset': 100, 'type': 5}]}
+# 18: {'name': 'Respawn', 'members': [{'name': '@@AID@@', 'offset': 0, 'type': 2}, {'name': 'm_nDeaths', 'offset': 4, 'type': 4}, {'name': 'm_lActiveID', 'offset': 8, 'type': 4}, {'name': 'm_bIsRespawning', 'offset': 12, 'type': 4}, {'name': 'm_SoundRespawn', 'offset': 16, 'type': 4}, {'name': 'm_bCheckPoint', 'offset': 20, 'type': 4}]}
+# 19: {'name': 'LightManager', 'members': [{'name': 'm_colIndoors0', 'offset': 0, 'type': 9}, {'name': 'm_colIndoors1', 'offset': 12, 'type': 9}, {'name': 'm_colOutdoors0', 'offset': 24, 'type': 9}, {'name': 'm_colOutdoors1', 'offset': 36, 'type': 9}]}
+# 20: {'name': 'InitMath', 'members': []}
+# 21: {'name': 'InitSound', 'members': []}
+# 22: {'name': 'InitMisc', 'members': []}
+# 23: {'name': 'InitCharacter', 'members': []}
+# 24: {'name': 'InitHints', 'members': []}
+# 25: {'name': 'InitSteam', 'members': []}
+# 26: {'name': 'Pickup', 'members': [{'name': '@@AID@@', 'offset': 0, 'type': 2}, {'name': 'OnPickup', 'offset': 4, 'type': 4}, {'name': 'm_tOnPickup', 'offset': 8, 'type': 12}, {'name': 'm_sndOnPickup', 'offset': 12, 'type': 4}, {'name': 'm_bIsPickedUp', 'offset': 16, 'type': 4}, {'name': 'm_name', 'offset': 20, 'type': 7}]}
+# 27: {'name': 'Door', 'members': [{'name': '@@AID@@', 'offset': 0, 'type': 2}, {'name': 'aOpen', 'offset': 4, 'type': 4}, {'name': 'm_tDoor', 'offset': 8, 'type': 12}, {'name': 'm_tCamInRoom', 'offset': 12, 'type': 12}, {'name': 'm_tChrInRoom', 'offset': 16, 'type': 12}, {'name': 'm_bEnabled', 'offset': 20, 'type': 4}, {'name': 'm_bIsOpen', 'offset': 24, 'type': 4}, {'name': 'm_bIsLocked', 'offset': 28, 'type': 4}, {'name': 'm_bIsLockedAndShut', 'offset': 32, 'type': 4}, {'name': 'm_bPlayerSnuckBack', 'offset': 36, 'type': 4}, {'name': 'm_openSoundID', 'offset': 40, 'type': 4}, {'name': 'm_openSound2ID', 'offset': 44, 'type': 4}, {'name': 'm_closeSoundID', 'offset': 48, 'type': 4}, {'name': 'm_closeSound2ID', 'offset': 52, 'type': 4}, {'name': 'm_unlockSoundID', 'offset': 56, 'type': 4}, {'name': 'm_lockedSoundID', 'offset': 60, 'type': 4}, {'name': 'm_bLockedSpeech', 'offset': 64, 'type': 4}, {'name': 'm_LockedSpeechNum', 'offset': 68, 'type': 4}, {'name': 'm_bLockedSpeaking', 'offset': 72, 'type': 4}, {'name': 'm_bSoundLoopOpen', 'offset': 76, 'type': 4}, {'name': 'm_bSoundLoopClose', 'offset': 80, 'type': 4}, {'name': 'm_SoundRadius', 'offset': 84, 'type': 5}, {'name': 'm_bKeycard', 'offset': 88, 'type': 4}, {'name': 'm_KeycardName', 'offset': 92, 'type': 7}, {'name': 'm_bKeycardBox', 'offset': 96, 'type': 4}, {'name': 'm_KeycardBoxNode', 'offset': 100, 'type': 7}, {'name': 'm_KeycardBoxHintId', 'offset': 104, 'type': 4}, {'name': 'm_KeycardBoxObject', 'offset': 108, 'type': 7}, {'name': 'm_KeycardBoxSeqOn', 'offset': 112, 'type': 7}, {'name': 'm_KeycardBoxSeqOff', 'offset': 116, 'type': 7}, {'name': 'm_bLockedRunning', 'offset': 120, 'type': 4}, {'name': 'm_NumLockedRunning', 'offset': 124, 'type': 4}, {'name': 'm_bAutoLock', 'offset': 128, 'type': 4}, {'name': 'm_bAutoLockDoLock', 'offset': 132, 'type': 4}, {'name': 'm_bWantLock', 'offset': 136, 'type': 4}, {'name': 'm_tAutoLock', 'offset': 140, 'type': 12}, {'name': 'm_MoveShake', 'offset': 144, 'type': 5}, {'name': 'm_ShutShake', 'offset': 148, 'type': 5}, {'name': 'm_bDoubleDoor', 'offset': 152, 'type': 4}, {'name': 'm_ObjectName2', 'offset': 156, 'type': 7}, {'name': 'm_OpenAnimation2', 'offset': 160, 'type': 7}, {'name': 'm_CloseAnimation2', 'offset': 164, 'type': 7}, {'name': 'm_TriggerName', 'offset': 168, 'type': 7}, {'name': 'm_ObjectName', 'offset': 172, 'type': 7}, {'name': 'm_OpenAnimation', 'offset': 176, 'type': 7}, {'name': 'm_CloseAnimation', 'offset': 180, 'type': 7}, {'name': 'm_portal', 'offset': 184, 'type': 7}, {'name': 'm_bUsePortal', 'offset': 188, 'type': 4}, {'name': 'm_bNpcAccess', 'offset': 192, 'type': 4}, {'name': 'm_bNpcOpen', 'offset': 196, 'type': 4}, {'name': 'm_bPlayerOpen', 'offset': 200, 'type': 4}, {'name': 'm_bOpenRunning', 'offset': 204, 'type': 4}, {'name': 'm_bCloseRunning', 'offset': 208, 'type': 4}, {'name': 'm_bSkipped', 'offset': 212, 'type': 4}]}
+# 28: {'name': 'Elevator', 'members': [{'name': '@@AID@@', 'offset': 0, 'type': 2}, {'name': 'OnElev1stFloorInside', 'offset': 4, 'type': 4}, {'name': 'OnElev2ndFloorInside', 'offset': 8, 'type': 4}, {'name': 'm_tElev1stFloorInside', 'offset': 12, 'type': 12}, {'name': 'm_tElev2ndFloorInside', 'offset': 16, 'type': 12}, {'name': 'm_door1', 'offset': 20, 'type': 27}, {'name': 'm_door2', 'offset': 236, 'type': 27}, {'name': 'm_elevatorIsMoving', 'offset': 452, 'type': 4}, {'name': 'm_SoundElevator', 'offset': 456, 'type': 4}, {'name': 'm_SoundId', 'offset': 460, 'type': 4}, {'name': 'm_staticCameraNode1', 'offset': 464, 'type': 7}, {'name': 'm_staticCameraNode2', 'offset': 468, 'type': 7}, {'name': 'm_nodeInside1', 'offset': 472, 'type': 7}, {'name': 'm_nodeInside2', 'offset': 476, 'type': 7}]}
+# 29: {'name': 'InteractObject', 'members': [{'name': '@@AID@@', 'offset': 0, 'type': 2}, {'name': 'aInteract', 'offset': 4, 'type': 4}, {'name': 'm_tButtonUse', 'offset': 8, 'type': 12}, {'name': 'm_bOnce', 'offset': 12, 'type': 4}, {'name': 'm_bButton', 'offset': 16, 'type': 4}, {'name': 'm_ButtonAnim', 'offset': 20, 'type': 7}, {'name': 'm_ButtonSeqOn', 'offset': 24, 'type': 7}, {'name': 'm_ButtonSeqOff', 'offset': 28, 'type': 7}, {'name': 'm_ButtonSoundOn', 'offset': 32, 'type': 4}, {'name': 'm_ButtonSoundOff', 'offset': 36, 'type': 4}, {'name': 'm_tThere', 'offset': 40, 'type': 12}, {'name': 'm_bTrigger', 'offset': 44, 'type': 4}, {'name': 'm_TriggerName', 'offset': 48, 'type': 7}, {'name': 'm_bHint', 'offset': 52, 'type': 4}, {'name': 'm_HintId', 'offset': 56, 'type': 4}, {'name': 'm_Hint', 'offset': 60, 'type': 7}, {'name': 'm_bDestructable', 'offset': 64, 'type': 4}, {'name': 'm_bSnap', 'offset': 68, 'type': 4}, {'name': 'm_InteractType', 'offset': 72, 'type': 4}, {'name': 'm_bCollectibleInside', 'offset': 76, 'type': 4}, {'name': 'm_CollectibleType', 'offset': 80, 'type': 7}, {'name': 'm_bPickupInside', 'offset': 84, 'type': 4}, {'name': 'm_PickupName', 'offset': 88, 'type': 7}, {'name': 'm_tPickup', 'offset': 92, 'type': 12}, {'name': 'm_bNibblerInside', 'offset': 96, 'type': 4}, {'name': 'm_NibblerName', 'offset': 100, 'type': 7}, {'name': 'm_OffDist', 'offset': 104, 'type': 5}, {'name': 'm_bEnabled', 'offset': 108, 'type': 4}, {'name': 'm_FaceAngle', 'offset': 112, 'type': 5}, {'name': 'm_SoundId1', 'offset': 116, 'type': 4}, {'name': 'm_SoundId2', 'offset': 120, 'type': 4}, {'name': 'm_SoundLoopId', 'offset': 124, 'type': 4}, {'name': 'm_SoundPitch', 'offset': 128, 'type': 5}, {'name': 'm_bTwoStates', 'offset': 132, 'type': 4}, {'name': 'm_CurState', 'offset': 136, 'type': 4}, {'name': 'm_NodeName', 'offset': 140, 'type': 7}, {'name': 'm_Animation', 'offset': 144, 'type': 7}, {'name': 'm_Sequence1', 'offset': 148, 'type': 7}, {'name': 'm_Sequence2', 'offset': 152, 'type': 7}, {'name': 'm_LastState', 'offset': 156, 'type': 4}, {'name': 'm_SpawnWaitDivider', 'offset': 160, 'type': 5}]}
+# 30: {'name': 'ButtonObject', 'members': [{'name': '@@AID@@', 'offset': 0, 'type': 2}, {'name': 'aInteract', 'offset': 4, 'type': 4}, {'name': 'm_tButtonUse', 'offset': 8, 'type': 12}, {'name': 'm_tThere', 'offset': 12, 'type': 12}, {'name': 'm_bTrigger', 'offset': 16, 'type': 4}, {'name': 'm_TriggerName', 'offset': 20, 'type': 7}, {'name': 'm_bInteractAnim', 'offset': 24, 'type': 4}, {'name': 'm_InteractAnim', 'offset': 28, 'type': 7}, {'name': 'm_bCollectibleInside', 'offset': 32, 'type': 4}, {'name': 'm_CollectibleType', 'offset': 36, 'type': 7}, {'name': 'm_bPickupInside', 'offset': 40, 'type': 4}, {'name': 'm_PickupName', 'offset': 44, 'type': 7}, {'name': 'm_tPickup', 'offset': 48, 'type': 12}, {'name': 'm_SoundId1', 'offset': 52, 'type': 4}, {'name': 'm_SoundId2', 'offset': 56, 'type': 4}, {'name': 'm_SoundIdButton1', 'offset': 60, 'type': 4}, {'name': 'm_SoundIdButton2', 'offset': 64, 'type': 4}, {'name': 'm_SoundLoopId', 'offset': 68, 'type': 4}, {'name': 'm_bEnabled', 'offset': 72, 'type': 4}, {'name': 'm_bActive', 'offset': 76, 'type': 4}, {'name': 'm_NodeName', 'offset': 80, 'type': 7}, {'name': 'm_ButtonAnim', 'offset': 84, 'type': 7}, {'name': 'm_ButtonSeq1', 'offset': 88, 'type': 7}, {'name': 'm_ButtonSeq2', 'offset': 92, 'type': 7}, {'name': 'm_bTwoStates', 'offset': 96, 'type': 4}, {'name': 'm_ObjectAnim', 'offset': 100, 'type': 7}, {'name': 'm_ObjectSeq1', 'offset': 104, 'type': 7}, {'name': 'm_ObjectSeq2', 'offset': 108, 'type': 7}, {'name': 'm_SpawnWaitDivider', 'offset': 112, 'type': 5}]}
+# 31: {'name': 'Surveillance', 'members': [{'name': '@@AID@@', 'offset': 0, 'type': 2}, {'name': 'aButton', 'offset': 4, 'type': 4}, {'name': 'm_Node', 'offset': 8, 'type': 7}, {'name': 'm_Object', 'offset': 12, 'type': 7}, {'name': 'm_SeqOn', 'offset': 16, 'type': 7}, {'name': 'm_SeqOff', 'offset': 20, 'type': 7}, {'name': 'm_Hint', 'offset': 24, 'type': 4}, {'name': 'm_CameraSound', 'offset': 28, 'type': 4}, {'name': 'm_MaxCamera', 'offset': 32, 'type': 4}, {'name': 'm_CurCamera', 'offset': 36, 'type': 4}]}
+# 32: {'name': 'SlurmMachine', 'members': [{'name': '@@AID@@', 'offset': 0, 'type': 2}, {'name': 'aInteract', 'offset': 4, 'type': 4}, {'name': 'm_Trigger', 'offset': 8, 'type': 12}, {'name': 'm_HintId', 'offset': 12, 'type': 4}, {'name': 'm_Node', 'offset': 16, 'type': 7}, {'name': 'm_Anim', 'offset': 20, 'type': 7}, {'name': 'm_SeqPress', 'offset': 24, 'type': 7}, {'name': 'm_SeqHide', 'offset': 28, 'type': 7}, {'name': 'm_Sound', 'offset': 32, 'type': 4}, {'name': 'm_SlurmName', 'offset': 36, 'type': 7}, {'name': 'm_State', 'offset': 40, 'type': 4}]}
+# 33: {'name': 'StaticNpc', 'members': [{'name': 'm_InstanceName', 'offset': 0, 'type': 7}]}
+# 34: {'name': 'Sounds', 'members': [{'name': 'm_Button', 'offset': 0, 'type': 4}, {'name': 'm_OpenMetalLocker', 'offset': 4, 'type': 4}, {'name': 'm_CloseMetalLocker', 'offset': 8, 'type': 4}, {'name': 'm_MetalLockerLocked', 'offset': 12, 'type': 4}, {'name': 'm_SlideDoorOpen', 'offset': 16, 'type': 4}, {'name': 'm_SlideDoorClose', 'offset': 20, 'type': 4}, {'name': 'm_FridgeOpen', 'offset': 24, 'type': 4}, {'name': 'm_FridgeClose', 'offset': 28, 'type': 4}, {'name': 'm_BreadBoxOpen', 'offset': 32, 'type': 4}, {'name': 'm_BreadBoxClose', 'offset': 36, 'type': 4}, {'name': 'm_FanSpinning', 'offset': 40, 'type': 4}, {'name': 'm_FanRemove', 'offset': 44, 'type': 4}, {'name': 'm_FanCoverBreak', 'offset': 48, 'type': 4}, {'name': 'm_FanTurnOff', 'offset': 52, 'type': 4}, {'name': 'm_TvOn', 'offset': 56, 'type': 4}, {'name': 'm_TvOff', 'offset': 60, 'type': 4}, {'name': 'm_TvNoise', 'offset': 64, 'type': 4}, {'name': 'm_TvBreak', 'offset': 68, 'type': 4}, {'name': 'm_ElevatorTravel', 'offset': 72, 'type': 4}, {'name': 'm_ElevatorOpen', 'offset': 76, 'type': 4}, {'name': 'm_ElevatorClose', 'offset': 80, 'type': 4}, {'name': 'm_BoilerNoise', 'offset': 84, 'type': 4}, {'name': 'm_ScruffySnore', 'offset': 88, 'type': 4}, {'name': 'm_Skeleton', 'offset': 92, 'type': 4}, {'name': 'm_Hatch', 'offset': 96, 'type': 4}, {'name': 'm_LoungeWallShutter', 'offset': 100, 'type': 4}, {'name': 'm_LoungeWindowShutter', 'offset': 104, 'type': 4}, {'name': 'm_ZoidShutter', 'offset': 108, 'type': 4}, {'name': 'm_ZoidPosterOpen', 'offset': 112, 'type': 4}, {'name': 'm_ZoidPosterClose', 'offset': 116, 'type': 4}, {'name': 'm_ZoidHart', 'offset': 120, 'type': 4}, {'name': 'm_HermShutter', 'offset': 124, 'type': 4}, {'name': 'm_SlurmMachine', 'offset': 128, 'type': 4}, {'name': 'm_HermMachine', 'offset': 132, 'type': 4}, {'name': 'm_WaterRunning', 'offset': 136, 'type': 4}, {'name': 'm_AccessDenied', 'offset': 140, 'type': 4}, {'name': 'm_AccessGranted', 'offset': 144, 'type': 4}, {'name': 'm_HitMetal', 'offset': 148, 'type': 4}, {'name': 'm_Hologram', 'offset': 152, 'type': 4}, {'name': 'm_AllTools', 'offset': 156, 'type': 4}, {'name': 'm_SwingCable', 'offset': 160, 'type': 4}, {'name': 'm_PaperAttack', 'offset': 164, 'type': 4}, {'name': 'm_PaperPickSeq', 'offset': 168, 'type': 4}, {'name': 'm_PaperSnap', 'offset': 172, 'type': 4}, {'name': 'm_CameraButton', 'offset': 176, 'type': 4}, {'name': 'm_SewerTurd1', 'offset': 180, 'type': 4}, {'name': 'm_SewerTurd2', 'offset': 184, 'type': 4}, {'name': 'm_PadlockBreak', 'offset': 188, 'type': 4}, {'name': 'm_HermesMoan', 'offset': 192, 'type': 4}, {'name': 'm_HermesHit', 'offset': 196, 'type': 4}, {'name': 'm_DrawerOpen', 'offset': 200, 'type': 4}, {'name': 'm_DrawerClose', 'offset': 204, 'type': 4}, {'name': 'm_ItemToRack', 'offset': 208, 'type': 4}, {'name': 'm_PuzzleComplete', 'offset': 212, 'type': 4}, {'name': 'm_HitEgg', 'offset': 216, 'type': 4}, {'name': 'm_ZoidBinOpen', 'offset': 220, 'type': 4}, {'name': 'm_ZoidBinClose', 'offset': 224, 'type': 4}, {'name': 'm_sndAmbientSteamFromPipe', 'offset': 228, 'type': 4}, {'name': 'm_sndAmbientOilBubbleBurst', 'offset': 232, 'type': 4}, {'name': 'm_sndAmbientWeirdMachine', 'offset': 236, 'type': 4}, {'name': 'm_sndAmbientComputer', 'offset': 240, 'type': 4}, {'name': 'm_sndAmbientHumLoop1', 'offset': 244, 'type': 4}, {'name': 'm_sndAmbientHumLoop2', 'offset': 248, 'type': 4}, {'name': 'm_sndAmbientKnasterLoop1', 'offset': 252, 'type': 4}, {'name': 'm_sndAmbientKnasterLoop2', 'offset': 256, 'type': 4}, {'name': 'm_sndAmbientSpark1', 'offset': 260, 'type': 4}, {'name': 'm_sndAmbientSpark2', 'offset': 264, 'type': 4}, {'name': 'm_sndAmbientSpark3', 'offset': 268, 'type': 4}, {'name': 'm_sndAmbientBubbleLoop', 'offset': 272, 'type': 4}, {'name': 'm_sndAmbientBlipp1', 'offset': 276, 'type': 4}, {'name': 'm_sndAmbientBlipp2', 'offset': 280, 'type': 4}, {'name': 'm_Music', 'offset': 284, 'type': 4}]}
+# 35: {'name': 'Locker', 'members': [{'name': '@@AID@@', 'offset': 0, 'type': 2}, {'name': 'm_tDoor', 'offset': 4, 'type': 12}, {'name': 'm_tOpen', 'offset': 8, 'type': 12}, {'name': 'm_Trigger', 'offset': 12, 'type': 7}, {'name': 'm_TriggerOpen', 'offset': 16, 'type': 7}, {'name': 'm_Node', 'offset': 20, 'type': 7}, {'name': 'm_bIsLocked', 'offset': 24, 'type': 4}, {'name': 'm_bIsOpen', 'offset': 28, 'type': 4}, {'name': 'm_object', 'offset': 32, 'type': 7}, {'name': 'm_openAnimation', 'offset': 36, 'type': 7}, {'name': 'm_closeAnimation', 'offset': 40, 'type': 7}, {'name': 'm_openSound', 'offset': 44, 'type': 4}, {'name': 'm_closeSound', 'offset': 48, 'type': 4}, {'name': 'm_lockedSound', 'offset': 52, 'type': 4}, {'name': 'm_HintId', 'offset': 56, 'type': 4}, {'name': 'm_HintIdView', 'offset': 60, 'type': 4}]}
+# 36: {'name': 'Tool', 'members': [{'name': '@@AID@@', 'offset': 0, 'type': 2}, {'name': 'm_Node', 'offset': 4, 'type': 7}, {'name': 'm_pickup', 'offset': 8, 'type': 26}, {'name': 'm_placeAnim', 'offset': 32, 'type': 7}, {'name': 'm_placeUp', 'offset': 36, 'type': 7}, {'name': 'm_tToolrack', 'offset': 40, 'type': 12}, {'name': 'm_bPlaced', 'offset': 44, 'type': 4}]}
+# 37: {'name': 'FanControl', 'members': [{'name': '@@AID@@', 'offset': 0, 'type': 2}, {'name': 'aStart', 'offset': 4, 'type': 4}, {'name': 'aPressFanButton', 'offset': 8, 'type': 4}, {'name': 'aOpenCover', 'offset': 12, 'type': 4}, {'name': 'm_tFanButton', 'offset': 16, 'type': 12}, {'name': 'm_tFanGrating', 'offset': 20, 'type': 12}, {'name': 'm_bFanButtonIsPressed', 'offset': 24, 'type': 4}, {'name': 'm_bFanCoverIsOff', 'offset': 28, 'type': 4}, {'name': 'm_SpinSoundId', 'offset': 32, 'type': 4}]}
+# 38: {'name': 'WaterTap', 'members': [{'name': '@@AID@@', 'offset': 0, 'type': 2}, {'name': 'aInteract', 'offset': 4, 'type': 4}, {'name': 'm_Node', 'offset': 8, 'type': 7}, {'name': 'm_Anim', 'offset': 12, 'type': 7}, {'name': 'm_SeqOn', 'offset': 16, 'type': 7}, {'name': 'm_SeqOff', 'offset': 20, 'type': 7}, {'name': 'm_SeqRun', 'offset': 24, 'type': 7}, {'name': 'm_SoundOn', 'offset': 28, 'type': 4}, {'name': 'm_SoundOff', 'offset': 32, 'type': 4}, {'name': 'm_SoundRun', 'offset': 36, 'type': 4}, {'name': 'm_SoundRunId', 'offset': 40, 'type': 4}, {'name': 'm_State', 'offset': 44, 'type': 4}]}
+# 39: {'name': 'Tv', 'members': [{'name': '@@AID@@', 'offset': 0, 'type': 2}, {'name': 'aInteract', 'offset': 4, 'type': 4}, {'name': 'm_SoundOn', 'offset': 8, 'type': 4}, {'name': 'm_SoundOff', 'offset': 12, 'type': 4}, {'name': 'm_SoundNoise', 'offset': 16, 'type': 4}, {'name': 'm_SoundBreak', 'offset': 20, 'type': 4}, {'name': 'm_SoundNoiseId', 'offset': 24, 'type': 4}, {'name': 'm_State', 'offset': 28, 'type': 4}, {'name': 'm_HintId', 'offset': 32, 'type': 4}]}
+# 40: {'name': 'StageA', 'members': [{'name': '@@AID@@', 'offset': 0, 'type': 2}, {'name': 'm_tStart', 'offset': 4, 'type': 12}, {'name': 'aStart', 'offset': 8, 'type': 4}, {'name': 'm_Elevator', 'offset': 12, 'type': 28}, {'name': 'm_hangarDoor', 'offset': 492, 'type': 27}, {'name': 'm_zoidDoor', 'offset': 708, 'type': 27}, {'name': 'm_labDoor', 'offset': 924, 'type': 27}, {'name': 'm_boilerDoor', 'offset': 1140, 'type': 27}, {'name': 'm_loungeDoor1', 'offset': 1356, 'type': 27}, {'name': 'm_loungeDoor2', 'offset': 1572, 'type': 27}, {'name': 'm_lobbyDoor', 'offset': 1788, 'type': 27}, {'name': 'm_hermDoor', 'offset': 2004, 'type': 27}, {'name': 'm_tEntranceDoor', 'offset': 2220, 'type': 12}, {'name': 'aTryOpenEntranceDoor', 'offset': 2224, 'type': 4}, {'name': 'aUnlockHermesDoor', 'offset': 2228, 'type': 4}, {'name': 'aUnlockHangarDoors', 'offset': 2232, 'type': 4}, {'name': 'm_amyLocker', 'offset': 2236, 'type': 35}, {'name': 'm_fryLocker', 'offset': 2300, 'type': 35}, {'name': 'm_hermesLocker', 'offset': 2364, 'type': 35}, {'name': 'm_benderLocker', 'offset': 2428, 'type': 35}, {'name': 'm_profLocker', 'offset': 2492, 'type': 35}, {'name': 'm_zoidLocker', 'offset': 2556, 'type': 35}, {'name': 'aRollTheHead', 'offset': 2620, 'type': 4}, {'name': 'm_leelaLocker', 'offset': 2624, 'type': 35}, {'name': 'aDestroyLeelaLock', 'offset': 2688, 'type': 4}, {'name': 'aOpenLeelaLocker', 'offset': 2692, 'type': 4}, {'name': 'aOpenBenderLocker', 'offset': 2696, 'type': 4}, {'name': 'aOpenHermesLocker', 'offset': 2700, 'type': 4}, {'name': 'm_hammer', 'offset': 2704, 'type': 26}, {'name': 'm_keycard', 'offset': 2728, 'type': 26}, {'name': 'm_keycard2', 'offset': 2752, 'type': 26}, {'name': 'm_tKeycard2', 'offset': 2776, 'type': 12}, {'name': 'm_tEnableKeycard2', 'offset': 2780, 'type': 12}, {'name': 'm_tEnableHandbook', 'offset': 2784, 'type': 12}, {'name': 'm_drill', 'offset': 2788, 'type': 36}, {'name': 'm_cog', 'offset': 2836, 'type': 36}, {'name': 'm_bucket', 'offset': 2884, 'type': 36}, {'name': 'm_fireExtinguisher', 'offset': 2932, 'type': 36}, {'name': 'm_calculator', 'offset': 2980, 'type': 36}, {'name': 'm_handbook', 'offset': 3028, 'type': 36}, {'name': 'm_pogostick', 'offset': 3076, 'type': 36}, {'name': 'm_jack', 'offset': 3124, 'type': 36}, {'name': 'm_cup', 'offset': 3172, 'type': 36}, {'name': 'm_fan', 'offset': 3220, 'type': 36}, {'name': 'm_pliers', 'offset': 3268, 'type': 36}, {'name': 'm_hairdryer', 'offset': 3316, 'type': 36}, {'name': 'm_tFirewindowDestroyed', 'offset': 3364, 'type': 12}, {'name': 'aFirewindowDestroyed', 'offset': 3368, 'type': 4}, {'name': 'm_fanControl', 'offset': 3372, 'type': 37}, {'name': 'm_slurmFryLocker', 'offset': 3408, 'type': 26}, {'name': 'm_slurmBoilerRoom', 'offset': 3432, 'type': 26}, {'name': 'm_slurmLounge', 'offset': 3456, 'type': 26}, {'name': 'm_slurmLobby1', 'offset': 3480, 'type': 26}, {'name': 'm_slurmLobby2', 'offset': 3504, 'type': 26}, {'name': 'm_slurmLobby3', 'offset': 3528, 'type': 26}, {'name': 'm_slurmMachine', 'offset': 3552, 'type': 26}, {'name': 'm_slurmCabin1', 'offset': 3576, 'type': 26}, {'name': 'm_slurmCabin2', 'offset': 3600, 'type': 26}, {'name': 'aDeath', 'offset': 3624, 'type': 4}, {'name': 'aKeycardBox', 'offset': 3628, 'type': 4}, {'name': 'aHandbookBox', 'offset': 3632, 'type': 4}, {'name': 'm_HintHangarPad', 'offset': 3636, 'type': 4}, {'name': 'm_HintLabPad', 'offset': 3640, 'type': 4}, {'name': 'm_HintHammer', 'offset': 3644, 'type': 4}, {'name': 'aEnterBoil', 'offset': 3648, 'type': 4}, {'name': 'm_tEnterBoil', 'offset': 3652, 'type': 12}, {'name': 'aBoilerSounds', 'offset': 3656, 'type': 4}, {'name': 'aCableSounds', 'offset': 3660, 'type': 4}, {'name': 'aZoidHart', 'offset': 3664, 'type': 4}, {'name': 'm_SlurmMachineHall', 'offset': 3668, 'type': 32}, {'name': 'm_LobbyShutter1', 'offset': 3712, 'type': 29}, {'name': 'm_LobbyShutter2', 'offset': 3876, 'type': 29}, {'name': 'm_SlurmMachineLobby', 'offset': 4040, 'type': 32}, {'name': 'm_TapKitchen', 'offset': 4084, 'type': 38}, {'name': 'm_Surveillance', 'offset': 4132, 'type': 31}, {'name': 'm_Fridge', 'offset': 4172, 'type': 29}, {'name': 'm_Hologram', 'offset': 4336, 'type': 29}, {'name': 'aHologramToggle', 'offset': 4500, 'type': 4}, {'name': 'aWaitFridge', 'offset': 4504, 'type': 4}, {'name': 'm_Shower', 'offset': 4508, 'type': 27}, {'name': 'aShower', 'offset': 4724, 'type': 4}, {'name': 'aEgg', 'offset': 4728, 'type': 4}, {'name': 'm_HermDrawer1', 'offset': 4732, 'type': 29}, {'name': 'm_HermDrawer2', 'offset': 4896, 'type': 29}, {'name': 'm_HermDrawer3', 'offset': 5060, 'type': 29}, {'name': 'm_HermMail', 'offset': 5224, 'type': 29}, {'name': 'm_HermPresser', 'offset': 5388, 'type': 29}, {'name': 'aPaperMachine', 'offset': 5552, 'type': 4}, {'name': 'aPaperMachineDead', 'offset': 5556, 'type': 4}, {'name': 'm_PaperMachineState', 'offset': 5560, 'type': 4}, {'name': 'm_tPaperMachine', 'offset': 5564, 'type': 12}, {'name': 'm_tPaperMachineDead', 'offset': 5568, 'type': 12}, {'name': 'm_HintHermMachine', 'offset': 5572, 'type': 4}, {'name': 'aHermes', 'offset': 5576, 'type': 4}, {'name': 'm_Tv', 'offset': 5580, 'type': 39}, {'name': 'm_SlurmMachineLounge', 'offset': 5616, 'type': 32}, {'name': 'm_LoungeShutter', 'offset': 5660, 'type': 29}, {'name': 'm_LoungeWindow', 'offset': 5824, 'type': 29}, {'name': 'm_ZoidShutter', 'offset': 5988, 'type': 29}, {'name': 'm_TapZoid', 'offset': 6152, 'type': 38}, {'name': 'm_PosterText', 'offset': 6200, 'type': 29}, {'name': 'm_PosterHuman', 'offset': 6364, 'type': 29}, {'name': 'm_ZoidTrashcan', 'offset': 6528, 'type': 29}, {'name': 'm_DoorInnerZoid', 'offset': 6692, 'type': 27}, {'name': 'aDoorInnerZoid', 'offset': 6908, 'type': 4}, {'name': 'm_TapLab', 'offset': 6912, 'type': 38}, {'name': 'm_BreadBox', 'offset': 6960, 'type': 29}, {'name': 'm_BrownBox', 'offset': 7124, 'type': 29}, {'name': 'aLabSteam', 'offset': 7288, 'type': 4}, {'name': 'm_LabSteamState', 'offset': 7292, 'type': 4}, {'name': 'm_cabin2', 'offset': 7296, 'type': 29}, {'name': 'aCabin2Open', 'offset': 7460, 'type': 4}, {'name': 'm_LabDrawer', 'offset': 7464, 'type': 29}, {'name': 'm_Toilet', 'offset': 7628, 'type': 29}, {'name': 'aBenderClose', 'offset': 7792, 'type': 4}, {'name': 'm_tToilet', 'offset': 7796, 'type': 12}, {'name': 'm_tLabDoor', 'offset': 7800, 'type': 12}, {'name': 'm_tHangarPad', 'offset': 7804, 'type': 12}, {'name': 'm_HangarShutter', 'offset': 7808, 'type': 29}, {'name': 'aHangarButton', 'offset': 7972, 'type': 4}, {'name': 'm_HangarSteamState', 'offset': 7976, 'type': 4}, {'name': 'aPreloadHammerCutscene', 'offset': 7980, 'type': 4}, {'name': 'aPickupHammer', 'offset': 7984, 'type': 4}, {'name': 'm_tPrepareHammerCutscene', 'offset': 7988, 'type': 12}, {'name': 'm_bPlaceRunning', 'offset': 7992, 'type': 4}, {'name': 'm_bPlaceNow', 'offset': 7996, 'type': 4}, {'name': 'm_NumToolsInRack', 'offset': 8000, 'type': 4}, {'name': 'm_NumToolsInHand', 'offset': 8004, 'type': 4}, {'name': 'm_tToolRack', 'offset': 8008, 'type': 12}]}
+# 41: {'name': 'StageCommon', 'members': []}
+
+.global LevelInfo g_kInfo # Offset 0
+.global int g_bPlayerDead # Offset 8
+.global int g_bPlayerPreDead # Offset 12
+.global Respawn g_kSpawn # Offset 16
+.global LightManager g_kLightManager # Offset 40
+.global float PI # Offset 88
+.global InitMath g_InitMath # Offset 92
+.global reference @@AID@@ # Offset 92
+.global float g_RadButton # Offset 96
+.global float g_RadDoor # Offset 100
+.global float g_RadLever # Offset 104
+.global float g_RadEnv # Offset 108
+.global InitSound g_InitSound # Offset 112
+.global Trigger g_tButtonSkip # Offset 112
+.global Trigger g_tButtonUse # Offset 116
+.global Trigger g_tButtonJump # Offset 120
+.global Trigger g_tButtonAttack1 # Offset 124
+.global Trigger g_tButtonAttack2 # Offset 128
+.global Trigger g_tButtonStart # Offset 132
+.global float g_DefBouncePower # Offset 136
+.global InitMisc g_InitMisc # Offset 140
+.global float g_FaceDefAngle # Offset 140
+.global float g_FaceDefDist # Offset 144
+.global float g_Face90 # Offset 148
+.global float g_Face140 # Offset 152
+.global float g_Face180 # Offset 156
+.global float g_Face360 # Offset 160
+.global InitCharacter g_InitCharacter # Offset 164
+.global int g_TestHint # Offset 164
+.global int g_HintId # Offset 168
+.global int g_HintIdRemove # Offset 172
+.global int g_SteamSound1 # Offset 176
+.global int g_SteamSound2 # Offset 180
+.global int g_SteamSound3 # Offset 184
+.global string g_SteamName # Offset 188
+.global FsParticleDef g_SteamDef # Offset 192
+.global FsParticleDef g_SteamDefDefault # Offset 196
+.global FsParticleDef g_SteamDefGreen # Offset 200
+.global FsParticleDef g_SteamDefLongThin # Offset 204
+.global FsParticleDef g_SteamDefShortFat # Offset 208
+.global InitSteam g_InitSteam # Offset 212
+.global bool g_AbortableCamera # Offset 212
+.global bool g_AbortableCameraTextAdded # Offset 216
+.global Sounds g_Sounds # Offset 220
+.global int aDialog # Offset 508
+.global StageCommon g_Common # Offset 512
+.global StageA g_StageA # Offset 512
+.global int g_bWindowFight # Offset 8524
+
+# (0, 475): {'name': '@@action@@aDialog', 'path': 'Level1\\Level1-1\\Level1-1.fis', 'address': 596, 'type': 0, 'unk4': 385, 'locals': []}
+# (0, 2): {'name': 'ExitPoint', 'path': 'Level1\\Level1-1\\Level1-1.fis', 'address': 528, 'type': 0, 'unk4': 33, 'locals': []}
+# (0, 1): {'name': 'EntryPoint', 'path': 'Level1\\Level1-1\\Level1-1.fis', 'address': 0, 'type': 0, 'unk4': 17, 'locals': []}
+# (0, 474): {'name': 'SpawnStatic', 'path': 'std\\NPC\\stdStatic.fis', 'address': 860, 'type': 0, 'unk4': 1, 'locals': [{'name': 'instanceName', 'offset': 0, 'type': 7}, {'name': 'profile', 'offset': 4, 'type': 17}]}
+# (0, 473): {'name': 'AbortableCamera', 'path': 'std\\System\\stdCamera.fis', 'address': 1200, 'type': 0, 'unk4': 1, 'locals': []}
+# (0, 472): {'name': 'SyncShakeCam', 'path': 'std\\System\\stdCamera.fis', 'address': 1276, 'type': 0, 'unk4': 1, 'locals': [{'name': 'amp', 'offset': 0, 'type': 5}, {'name': 'delay', 'offset': 4, 'type': 5}, {'name': 'delta', 'offset': 8, 'type': 5}, {'name': 'bSkippable', 'offset': 12, 'type': 4}]}
+# (0, 471): {'name': 'SyncShakeCam', 'path': 'std\\System\\stdCamera.fis', 'address': 1576, 'type': 0, 'unk4': 1, 'locals': [{'name': 'amp', 'offset': 0, 'type': 5}, {'name': 'delay', 'offset': 4, 'type': 5}, {'name': 'delta', 'offset': 8, 'type': 5}]}
+# (0, 470): {'name': 'ShakeCam', 'path': 'std\\System\\stdCamera.fis', 'address': 1648, 'type': 0, 'unk4': 129, 'locals': [{'name': 'amp', 'offset': 0, 'type': 5}, {'name': 'delay', 'offset': 4, 'type': 5}, {'name': 'delta', 'offset': 8, 'type': 5}]}
+# (0, 469): {'name': 'ResetChaseCam', 'path': 'std\\System\\stdCamera.fis', 'address': 1728, 'type': 0, 'unk4': 1, 'locals': [{'name': 'fTime', 'offset': 0, 'type': 5}, {'name': 'i', 'offset': 4, 'type': 4}]}
+# (0, 468): {'name': 'ResetChaseCam', 'path': 'std\\System\\stdCamera.fis', 'address': 1984, 'type': 0, 'unk4': 1, 'locals': []}
+# (0, 467): {'name': 'RestoreCam', 'path': 'std\\System\\stdCamera.fis', 'address': 2032, 'type': 0, 'unk4': 1, 'locals': [{'name': 'waitTime', 'offset': 0, 'type': 5}, {'name': 'bPopCam', 'offset': 4, 'type': 4}]}
+# (0, 466): {'name': 'RestoreCam', 'path': 'std\\System\\stdCamera.fis', 'address': 2168, 'type': 0, 'unk4': 1, 'locals': [{'name': 'waitTime', 'offset': 0, 'type': 5}]}
+# (0, 465): {'name': 'RestoreCam', 'path': 'std\\System\\stdCamera.fis', 'address': 2224, 'type': 0, 'unk4': 1, 'locals': [{'name': 'bPopCam', 'offset': 0, 'type': 4}]}
+# (0, 464): {'name': 'RestoreCam', 'path': 'std\\System\\stdCamera.fis', 'address': 2280, 'type': 0, 'unk4': 1, 'locals': []}
+# (0, 463): {'name': 'PostRestoreCam', 'path': 'std\\System\\stdCamera.fis', 'address': 2328, 'type': 0, 'unk4': 1, 'locals': [{'name': 'bPopCam', 'offset': 0, 'type': 4}]}
+# (0, 462): {'name': 'PostRestoreCam', 'path': 'std\\System\\stdCamera.fis', 'address': 2624, 'type': 0, 'unk4': 1, 'locals': []}
+# (0, 461): {'name': 'ShowCam', 'path': 'std\\System\\stdCamera.fis', 'address': 2672, 'type': 0, 'unk4': 1, 'locals': [{'name': 'camNode', 'offset': 0, 'type': 7}, {'name': 'targNode', 'offset': 4, 'type': 7}, {'name': 'inertia', 'offset': 8, 'type': 5}, {'name': 'waitTime', 'offset': 12, 'type': 5}]}
+# (0, 460): {'name': 'ShowCam', 'path': 'std\\System\\stdCamera.fis', 'address': 2844, 'type': 0, 'unk4': 1, 'locals': [{'name': 'camNode', 'offset': 0, 'type': 7}, {'name': 'targNode', 'offset': 4, 'type': 7}, {'name': 'inertia', 'offset': 8, 'type': 5}, {'name': 'bInertia', 'offset': 12, 'type': 4}]}
+# (0, 459): {'name': 'ShowCam', 'path': 'std\\System\\stdCamera.fis', 'address': 2916, 'type': 0, 'unk4': 1, 'locals': [{'name': 'camNode', 'offset': 0, 'type': 7}, {'name': 'targNode', 'offset': 4, 'type': 7}, {'name': 'waitTime', 'offset': 8, 'type': 5}]}
+# (0, 458): {'name': 'ShowCam', 'path': 'std\\System\\stdCamera.fis', 'address': 2988, 'type': 0, 'unk4': 1, 'locals': [{'name': 'camNode', 'offset': 0, 'type': 7}, {'name': 'targNode', 'offset': 4, 'type': 7}]}
+# (0, 457): {'name': 'PreShowCam', 'path': 'std\\System\\stdCamera.fis', 'address': 3060, 'type': 0, 'unk4': 1, 'locals': [{'name': 'bPushCam', 'offset': 0, 'type': 4}, {'name': 'bOnGround', 'offset': 4, 'type': 4}]}
+# (0, 456): {'name': 'PreShowCam', 'path': 'std\\System\\stdCamera.fis', 'address': 3452, 'type': 0, 'unk4': 1, 'locals': [{'name': 'bPushCam', 'offset': 0, 'type': 4}]}
+# (0, 455): {'name': 'PreShowCam', 'path': 'std\\System\\stdCamera.fis', 'address': 3508, 'type': 0, 'unk4': 1, 'locals': []}
+# (0, 454): {'name': 'RotateCam', 'path': 'std\\System\\stdCamera.fis', 'address': 3564, 'type': 0, 'unk4': 1, 'locals': [{'name': 'center', 'offset': 0, 'type': 7}, {'name': 'centerOffsetY', 'offset': 4, 'type': 5}, {'name': 'radius', 'offset': 8, 'type': 5}, {'name': 'start', 'offset': 12, 'type': 5}, {'name': 'bReverse', 'offset': 16, 'type': 4}, {'name': 'bSkippable', 'offset': 20, 'type': 4}, {'name': 'camcenter', 'offset': 24, 'type': 8}, {'name': 't_skip', 'offset': 36, 'type': 12}, {'name': 'i', 'offset': 40, 'type': 4}, {'name': 'angle', 'offset': 44, 'type': 5}, {'name': 'angle2', 'offset': 48, 'type': 5}, {'name': 'dir', 'offset': 52, 'type': 5}]}
+# (0, 453): {'name': 'RotateCam', 'path': 'std\\System\\stdCamera.fis', 'address': 5288, 'type': 0, 'unk4': 1, 'locals': [{'name': 'center', 'offset': 0, 'type': 7}, {'name': 'centerOffsetY', 'offset': 4, 'type': 5}, {'name': 'radius', 'offset': 8, 'type': 5}, {'name': 'start', 'offset': 12, 'type': 5}, {'name': 'bReverse', 'offset': 16, 'type': 4}]}
+# (0, 452): {'name': 'RotateCam', 'path': 'std\\System\\stdCamera.fis', 'address': 5376, 'type': 0, 'unk4': 1, 'locals': [{'name': 'center', 'offset': 0, 'type': 7}, {'name': 'centerOffsetY', 'offset': 4, 'type': 5}, {'name': 'radius', 'offset': 8, 'type': 5}, {'name': 'start', 'offset': 12, 'type': 5}]}
+# (0, 451): {'name': 'SetTopCam', 'path': 'std\\System\\stdCamera.fis', 'address': 5456, 'type': 0, 'unk4': 1, 'locals': [{'name': 'height', 'offset': 0, 'type': 5}, {'name': 'look_vect', 'offset': 4, 'type': 8}]}
+# (0, 450): {'name': 'SetSteamDef', 'path': 'std\\System\\stdSteam.fis', 'address': 5604, 'type': 0, 'unk4': 1, 'locals': [{'name': 'def', 'offset': 0, 'type': 14}]}
+# (0, 449): {'name': 'StopSteam', 'path': 'std\\System\\stdSteam.fis', 'address': 5640, 'type': 0, 'unk4': 129, 'locals': [{'name': 'name', 'offset': 0, 'type': 7}]}
+# (0, 448): {'name': 'StopSteamSync', 'path': 'std\\System\\stdSteam.fis', 'address': 5696, 'type': 0, 'unk4': 1, 'locals': [{'name': 'name', 'offset': 0, 'type': 7}]}
+# (0, 447): {'name': 'RunSteam', 'path': 'std\\System\\stdSteam.fis', 'address': 5848, 'type': 0, 'unk4': 129, 'locals': [{'name': 'name', 'offset': 0, 'type': 7}, {'name': 'minOff', 'offset': 4, 'type': 5}, {'name': 'maxOff', 'offset': 8, 'type': 5}, {'name': 'minOn', 'offset': 12, 'type': 5}, {'name': 'maxOn', 'offset': 16, 'type': 5}, {'name': 'soundRadius', 'offset': 20, 'type': 5}, {'name': 'steam_sound', 'offset': 24, 'type': 4}, {'name': 'r', 'offset': 28, 'type': 5}, {'name': 'sound', 'offset': 32, 'type': 4}, {'name': 'vol', 'offset': 36, 'type': 5}, {'name': 'wait1', 'offset': 40, 'type': 5}, {'name': 'wait2', 'offset': 44, 'type': 5}]}
+# (0, 446): {'name': 'RunSteam', 'path': 'std\\System\\stdSteam.fis', 'address': 7496, 'type': 0, 'unk4': 1, 'locals': [{'name': 'name', 'offset': 0, 'type': 7}, {'name': 'minOff', 'offset': 4, 'type': 5}, {'name': 'maxOff', 'offset': 8, 'type': 5}, {'name': 'minOn', 'offset': 12, 'type': 5}, {'name': 'maxOn', 'offset': 16, 'type': 5}]}
+# (0, 445): {'name': 'RunSteam', 'path': 'std\\System\\stdSteam.fis', 'address': 7588, 'type': 0, 'unk4': 1, 'locals': [{'name': 'name', 'offset': 0, 'type': 7}, {'name': 'soundRadius', 'offset': 4, 'type': 5}, {'name': 'bForever', 'offset': 8, 'type': 4}]}
+# (0, 444): {'name': 'RunSteam', 'path': 'std\\System\\stdSteam.fis', 'address': 7776, 'type': 0, 'unk4': 1, 'locals': [{'name': 'name', 'offset': 0, 'type': 7}, {'name': 'bForever', 'offset': 4, 'type': 4}]}
+# (0, 443): {'name': 'RunSteam', 'path': 'std\\System\\stdSteam.fis', 'address': 7840, 'type': 0, 'unk4': 1, 'locals': [{'name': 'name', 'offset': 0, 'type': 7}, {'name': 'soundRadius', 'offset': 4, 'type': 5}]}
+# (0, 442): {'name': 'RunSteam', 'path': 'std\\System\\stdSteam.fis', 'address': 7904, 'type': 0, 'unk4': 1, 'locals': [{'name': 'name', 'offset': 0, 'type': 7}]}
+# (0, 441): {'name': 'RemoveHint', 'path': 'std\\System\\stdHints.fis', 'address': 7968, 'type': 0, 'unk4': 129, 'locals': [{'name': 'id', 'offset': 0, 'type': 4}]}
+# (0, 440): {'name': 'RunHint', 'path': 'std\\System\\stdHints.fis', 'address': 8232, 'type': 0, 'unk4': 129, 'locals': [{'name': 'hintId', 'offset': 0, 'type': 4}, {'name': 'hint', 'offset': 4, 'type': 7}, {'name': 'node', 'offset': 8, 'type': 7}, {'name': 'maxDist', 'offset': 12, 'type': 5}, {'name': 'maxAngle', 'offset': 16, 'type': 5}, {'name': 'tClose', 'offset': 20, 'type': 12}, {'name': 'bNode', 'offset': 24, 'type': 4}, {'name': 'bRemove', 'offset': 28, 'type': 4}, {'name': 'dotest', 'offset': 32, 'type': 4}]}
+# (0, 439): {'name': 'AddHint', 'path': 'std\\System\\stdHints.fis', 'address': 10572, 'type': 0, 'unk4': 1, 'locals': [{'name': 'hint', 'offset': 0, 'type': 7}, {'name': 'node', 'offset': 4, 'type': 7}, {'name': 'maxDist', 'offset': 8, 'type': 5}, {'name': 'maxAngle', 'offset': 12, 'type': 5}, {'name': 'trigger', 'offset': 16, 'type': 7}, {'name': 'bRemove', 'offset': 20, 'type': 4}]}
+# (0, 438): {'name': 'AddHint', 'path': 'std\\System\\stdHints.fis', 'address': 10760, 'type': 0, 'unk4': 1, 'locals': [{'name': 'hint', 'offset': 0, 'type': 7}, {'name': 'node', 'offset': 4, 'type': 7}, {'name': 'maxDist', 'offset': 8, 'type': 5}, {'name': 'trigger', 'offset': 12, 'type': 7}, {'name': 'bRemove', 'offset': 16, 'type': 4}]}
+# (0, 437): {'name': 'AddHint', 'path': 'std\\System\\stdHints.fis', 'address': 11088, 'type': 0, 'unk4': 1, 'locals': [{'name': 'hint', 'offset': 0, 'type': 7}, {'name': 'node', 'offset': 4, 'type': 7}, {'name': 'trigger', 'offset': 8, 'type': 7}, {'name': 'bRemove', 'offset': 12, 'type': 4}]}
+# (0, 436): {'name': 'AddHint', 'path': 'std\\System\\stdHints.fis', 'address': 11176, 'type': 0, 'unk4': 1, 'locals': [{'name': 'hint', 'offset': 0, 'type': 7}, {'name': 'node', 'offset': 4, 'type': 7}, {'name': 'maxDist', 'offset': 8, 'type': 5}, {'name': 'maxAngle', 'offset': 12, 'type': 5}, {'name': 'bRemove', 'offset': 16, 'type': 4}]}
+# (0, 435): {'name': 'AddHint', 'path': 'std\\System\\stdHints.fis', 'address': 11348, 'type': 0, 'unk4': 1, 'locals': [{'name': 'hint', 'offset': 0, 'type': 7}, {'name': 'node', 'offset': 4, 'type': 7}, {'name': 'maxDist', 'offset': 8, 'type': 5}, {'name': 'bRemove', 'offset': 12, 'type': 4}]}
+# (0, 434): {'name': 'AddHint', 'path': 'std\\System\\stdHints.fis', 'address': 11520, 'type': 0, 'unk4': 1, 'locals': [{'name': 'hint', 'offset': 0, 'type': 7}, {'name': 'node', 'offset': 4, 'type': 7}, {'name': 'bRemove', 'offset': 8, 'type': 4}]}
+# (0, 433): {'name': 'AddHint', 'path': 'std\\System\\stdHints.fis', 'address': 11600, 'type': 0, 'unk4': 1, 'locals': [{'name': 'hint', 'offset': 0, 'type': 7}, {'name': 'trigger', 'offset': 4, 'type': 7}, {'name': 'trig', 'offset': 8, 'type': 4}, {'name': 'bRemove', 'offset': 12, 'type': 4}]}
+# (0, 432): {'name': 'WaitLeaveDoor', 'path': 'std\\System\\stdCharacter.fis', 'address': 11792, 'type': 0, 'unk4': 1, 'locals': [{'name': 'trigger1', 'offset': 0, 'type': 7}, {'name': 'trigger2', 'offset': 4, 'type': 7}, {'name': 't_door1', 'offset': 8, 'type': 12}, {'name': 't_door2', 'offset': 12, 'type': 12}]}
+# (0, 431): {'name': 'WalkPlayer', 'path': 'std\\System\\stdCharacter.fis', 'address': 12080, 'type': 0, 'unk4': 1, 'locals': [{'name': 'node', 'offset': 0, 'type': 7}, {'name': 'map', 'offset': 4, 'type': 7}, {'name': 'precision', 'offset': 8, 'type': 5}, {'name': 'bRun', 'offset': 12, 'type': 4}, {'name': 'bSkippable', 'offset': 16, 'type': 4}]}
+# (0, 430): {'name': 'WalkPlayer', 'path': 'std\\System\\stdCharacter.fis', 'address': 12624, 'type': 0, 'unk4': 1, 'locals': [{'name': 'node', 'offset': 0, 'type': 7}, {'name': 'map', 'offset': 4, 'type': 7}, {'name': 'precision', 'offset': 8, 'type': 5}, {'name': 'bRun', 'offset': 12, 'type': 4}]}
+# (0, 429): {'name': 'WalkPlayer', 'path': 'std\\System\\stdCharacter.fis', 'address': 12704, 'type': 0, 'unk4': 1, 'locals': [{'name': 'node', 'offset': 0, 'type': 7}, {'name': 'map', 'offset': 4, 'type': 7}, {'name': 'bRun', 'offset': 8, 'type': 4}, {'name': 'bSkippable', 'offset': 12, 'type': 4}]}
+# (0, 428): {'name': 'WalkPlayer', 'path': 'std\\System\\stdCharacter.fis', 'address': 12784, 'type': 0, 'unk4': 1, 'locals': [{'name': 'node', 'offset': 0, 'type': 7}, {'name': 'map', 'offset': 4, 'type': 7}, {'name': 'bRun', 'offset': 8, 'type': 4}]}
+# (0, 427): {'name': 'WaitMove', 'path': 'std\\System\\stdCharacter.fis', 'address': 12864, 'type': 0, 'unk4': 1, 'locals': [{'name': 'character', 'offset': 0, 'type': 7}, {'name': 'treshold', 'offset': 4, 'type': 5}, {'name': 'old_pos', 'offset': 8, 'type': 8}, {'name': 'new_pos', 'offset': 20, 'type': 8}]}
+# (0, 426): {'name': 'WaitMove', 'path': 'std\\System\\stdCharacter.fis', 'address': 13196, 'type': 0, 'unk4': 1, 'locals': [{'name': 'character', 'offset': 0, 'type': 7}]}
+# (0, 425): {'name': 'Interact', 'path': 'std\\System\\stdCharacter.fis', 'address': 13252, 'type': 0, 'unk4': 1, 'locals': []}
+# (0, 424): {'name': 'ImmortalCharacter', 'path': 'std\\System\\stdCharacter.fis', 'address': 13320, 'type': 0, 'unk4': 1, 'locals': [{'name': 'instance', 'offset': 0, 'type': 7}, {'name': 'life', 'offset': 4, 'type': 5}]}
+# (0, 423): {'name': 'WaitCharAnimation', 'path': 'std\\System\\stdCharacter.fis', 'address': 13384, 'type': 0, 'unk4': 1, 'locals': [{'name': 'instance', 'offset': 0, 'type': 7}, {'name': 'anim', 'offset': 4, 'type': 7}]}
+# (0, 422): {'name': 'CharAnimateWait', 'path': 'std\\System\\stdCharacter.fis', 'address': 13484, 'type': 0, 'unk4': 1, 'locals': [{'name': 'instance', 'offset': 0, 'type': 7}, {'name': 'anim', 'offset': 4, 'type': 7}, {'name': 'anim_length', 'offset': 8, 'type': 5}]}
+# (0, 421): {'name': 'IsInteracting', 'path': 'std\\System\\stdCharacter.fis', 'address': 13580, 'type': 0, 'unk4': 1, 'locals': [{'name': 'node', 'offset': 0, 'type': 7}, {'name': 'maxDist', 'offset': 4, 'type': 5}, {'name': 'maxAngle', 'offset': 8, 'type': 5}]}
+# (0, 420): {'name': 'IsInteracting', 'path': 'std\\System\\stdCharacter.fis', 'address': 13804, 'type': 0, 'unk4': 1, 'locals': [{'name': 'node', 'offset': 0, 'type': 7}, {'name': 'maxDist', 'offset': 4, 'type': 5}]}
+# (0, 419): {'name': 'IsInteracting', 'path': 'std\\System\\stdCharacter.fis', 'address': 14020, 'type': 0, 'unk4': 1, 'locals': [{'name': 'node', 'offset': 0, 'type': 7}]}
+# (0, 418): {'name': 'IsPlayerFacing', 'path': 'std\\System\\stdCharacter.fis', 'address': 14228, 'type': 0, 'unk4': 1, 'locals': [{'name': 'node', 'offset': 0, 'type': 7}, {'name': 'maxDist', 'offset': 4, 'type': 5}, {'name': 'maxAngle', 'offset': 8, 'type': 5}]}
+# (0, 417): {'name': 'IsPlayerFacing', 'path': 'std\\System\\stdCharacter.fis', 'address': 14704, 'type': 0, 'unk4': 1, 'locals': [{'name': 'node', 'offset': 0, 'type': 7}, {'name': 'maxDist', 'offset': 4, 'type': 5}]}
+# (0, 416): {'name': 'IsPlayerFacing', 'path': 'std\\System\\stdCharacter.fis', 'address': 14776, 'type': 0, 'unk4': 1, 'locals': [{'name': 'node', 'offset': 0, 'type': 7}]}
+# (0, 415): {'name': 'PlayAnimationWait', 'path': 'std\\System\\stdAnimation.fis', 'address': 14848, 'type': 0, 'unk4': 1, 'locals': [{'name': 'objectName', 'offset': 0, 'type': 7}, {'name': 'animationName', 'offset': 4, 'type': 7}, {'name': 'bStoppable', 'offset': 8, 'type': 4}]}
+# (0, 414): {'name': 'PlayAnimationWait', 'path': 'std\\System\\stdAnimation.fis', 'address': 15024, 'type': 0, 'unk4': 1, 'locals': [{'name': 'objectName', 'offset': 0, 'type': 7}, {'name': 'animationName', 'offset': 4, 'type': 7}, {'name': 'anim_length', 'offset': 8, 'type': 5}]}
+# (0, 413): {'name': 'WaitAnimation', 'path': 'std\\System\\stdAnimation.fis', 'address': 15120, 'type': 0, 'unk4': 1, 'locals': [{'name': 'objectName', 'offset': 0, 'type': 7}, {'name': 'bStoppable', 'offset': 4, 'type': 4}, {'name': 'anim_length', 'offset': 8, 'type': 5}]}
+# (0, 412): {'name': 'WaitAnimation', 'path': 'std\\System\\stdAnimation.fis', 'address': 15480, 'type': 0, 'unk4': 1, 'locals': [{'name': 'objectName', 'offset': 0, 'type': 7}, {'name': 'anim_length', 'offset': 4, 'type': 5}]}
+# (0, 411): {'name': 'LoopAnimation', 'path': 'std\\System\\stdAnimation.fis', 'address': 15608, 'type': 0, 'unk4': 129, 'locals': [{'name': 'objectName', 'offset': 0, 'type': 7}, {'name': 'animationName', 'offset': 4, 'type': 7}, {'name': 'fDeltaTime', 'offset': 8, 'type': 5}, {'name': 'nTimes', 'offset': 12, 'type': 4}, {'name': 'fTimeToWait', 'offset': 16, 'type': 5}, {'name': 'i', 'offset': 20, 'type': 4}, {'name': 'bRunForever', 'offset': 24, 'type': 4}]}
+# (0, 410): {'name': 'ChangeLevel', 'path': 'std\\System\\stdMisc.fis', 'address': 16512, 'type': 0, 'unk4': 1, 'locals': [{'name': 'levelName', 'offset': 0, 'type': 7}]}
+# (0, 409): {'name': 'HudShowText', 'path': 'std\\System\\stdMisc.fis', 'address': 16656, 'type': 0, 'unk4': 129, 'locals': [{'name': 'textId', 'offset': 0, 'type': 7}, {'name': 'time', 'offset': 4, 'type': 5}]}
+# (0, 408): {'name': 'CrossFade', 'path': 'std\\System\\stdSound.fis', 'address': 16736, 'type': 0, 'unk4': 1, 'locals': [{'name': 'soundOut', 'offset': 0, 'type': 4}, {'name': 'soundIn', 'offset': 4, 'type': 4}, {'name': 'time', 'offset': 8, 'type': 5}]}
+# (0, 407): {'name': 'RotatingArmSound', 'path': 'std\\System\\stdSound.fis', 'address': 16828, 'type': 0, 'unk4': 129, 'locals': [{'name': 'node', 'offset': 0, 'type': 7}, {'name': 'object', 'offset': 4, 'type': 7}, {'name': 'seq', 'offset': 8, 'type': 7}, {'name': 'soundMove', 'offset': 12, 'type': 4}, {'name': 'soundRotate', 'offset': 16, 'type': 4}, {'name': 'bRotFirst', 'offset': 20, 'type': 4}, {'name': 'maxRad', 'offset': 24, 'type': 5}, {'name': 'minRad', 'offset': 28, 'type': 5}, {'name': 'sound_playing', 'offset': 32, 'type': 4}, {'name': 't_anim', 'offset': 36, 'type': 12}, {'name': 'i', 'offset': 40, 'type': 4}, {'name': 'i', 'offset': 44, 'type': 4}]}
+# (0, 406): {'name': 'FadeSound', 'path': 'std\\System\\stdSound.fis', 'address': 17748, 'type': 0, 'unk4': 129, 'locals': [{'name': 'soundId', 'offset': 0, 'type': 4}, {'name': 'time', 'offset': 4, 'type': 5}, {'name': 'vol', 'offset': 8, 'type': 5}, {'name': 'delta', 'offset': 12, 'type': 5}, {'name': 'cur_vol', 'offset': 16, 'type': 5}, {'name': 'the_delta', 'offset': 20, 'type': 5}, {'name': 'waittime', 'offset': 24, 'type': 5}, {'name': 'end_vol', 'offset': 28, 'type': 5}]}
+# (0, 405): {'name': 'FadeOutSound', 'path': 'std\\System\\stdSound.fis', 'address': 18520, 'type': 0, 'unk4': 1, 'locals': [{'name': 'soundId', 'offset': 0, 'type': 4}, {'name': 'time', 'offset': 4, 'type': 5}, {'name': 'vol', 'offset': 8, 'type': 5}]}
+# (0, 404): {'name': 'FadeOutSound', 'path': 'std\\System\\stdSound.fis', 'address': 18596, 'type': 0, 'unk4': 1, 'locals': [{'name': 'soundId', 'offset': 0, 'type': 4}, {'name': 'time', 'offset': 4, 'type': 5}]}
+# (0, 403): {'name': 'FadeInSound', 'path': 'std\\System\\stdSound.fis', 'address': 18672, 'type': 0, 'unk4': 1, 'locals': [{'name': 'soundId', 'offset': 0, 'type': 4}, {'name': 'time', 'offset': 4, 'type': 5}, {'name': 'vol', 'offset': 8, 'type': 5}]}
+# (0, 402): {'name': 'FadeInSound', 'path': 'std\\System\\stdSound.fis', 'address': 18748, 'type': 0, 'unk4': 1, 'locals': [{'name': 'soundId', 'offset': 0, 'type': 4}, {'name': 'time', 'offset': 4, 'type': 5}]}
+# (0, 401): {'name': 'Play3dSound', 'path': 'std\\System\\stdSound.fis', 'address': 18824, 'type': 0, 'unk4': 1, 'locals': [{'name': 'soundId', 'offset': 0, 'type': 4}, {'name': 'target', 'offset': 4, 'type': 7}, {'name': 'radius', 'offset': 8, 'type': 5}, {'name': 'minRadius', 'offset': 12, 'type': 5}, {'name': 'volume', 'offset': 16, 'type': 5}, {'name': 'bLoop', 'offset': 20, 'type': 4}, {'name': 'id', 'offset': 24, 'type': 4}]}
+# (0, 400): {'name': 'Play3dSound', 'path': 'std\\System\\stdSound.fis', 'address': 19000, 'type': 0, 'unk4': 1, 'locals': [{'name': 'soundId', 'offset': 0, 'type': 4}, {'name': 'target', 'offset': 4, 'type': 7}, {'name': 'radius', 'offset': 8, 'type': 5}, {'name': 'volume', 'offset': 12, 'type': 5}, {'name': 'bLoop', 'offset': 16, 'type': 4}, {'name': 'id', 'offset': 20, 'type': 4}]}
+# (0, 399): {'name': 'Play3dSound', 'path': 'std\\System\\stdSound.fis', 'address': 19148, 'type': 0, 'unk4': 1, 'locals': [{'name': 'soundId', 'offset': 0, 'type': 4}, {'name': 'target', 'offset': 4, 'type': 7}, {'name': 'radius', 'offset': 8, 'type': 5}, {'name': 'bLoop', 'offset': 12, 'type': 4}, {'name': 'id', 'offset': 16, 'type': 4}]}
+# (0, 398): {'name': 'Deg2Rad', 'path': 'std\\System\\stdMath.fis', 'address': 19268, 'type': 0, 'unk4': 1, 'locals': [{'name': 'deg', 'offset': 0, 'type': 5}]}
+# (0, 397): {'name': 'Deg2Face', 'path': 'std\\System\\stdMath.fis', 'address': 19356, 'type': 0, 'unk4': 1, 'locals': [{'name': 'angle', 'offset': 0, 'type': 5}]}
+# (0, 396): {'name': 'CirclePoint', 'path': 'std\\System\\stdMath.fis', 'address': 19532, 'type': 0, 'unk4': 1, 'locals': [{'name': 'center', 'offset': 0, 'type': 8}, {'name': 'radius', 'offset': 12, 'type': 5}, {'name': 'angle', 'offset': 16, 'type': 5}]}
+# (0, 395): {'name': 'RandPoint', 'path': 'std\\System\\stdMath.fis', 'address': 19780, 'type': 0, 'unk4': 1, 'locals': [{'name': 'min', 'offset': 0, 'type': 8}, {'name': 'max', 'offset': 12, 'type': 8}]}
+# (0, 394): {'name': 'RandPoint', 'path': 'std\\System\\stdMath.fis', 'address': 19876, 'type': 0, 'unk4': 1, 'locals': [{'name': 'xMin', 'offset': 0, 'type': 5}, {'name': 'xMax', 'offset': 4, 'type': 5}, {'name': 'yMin', 'offset': 8, 'type': 5}, {'name': 'yMax', 'offset': 12, 'type': 5}, {'name': 'zMin', 'offset': 16, 'type': 5}, {'name': 'zMax', 'offset': 20, 'type': 5}, {'name': 'point', 'offset': 24, 'type': 8}]}
+# (0, 393): {'name': '__detach__', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 392): {'name': 'PopBarrelCount', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 391): {'name': 'PopBeamCount', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 390): {'name': 'ResetBarrelsAndBeams', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 389): {'name': 'FsIsDemo', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 388): {'name': 'HUDTimeOut', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 387): {'name': 'HUDShow', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 386): {'name': 'HUDShow', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 385): {'name': 'HUDHide', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 384): {'name': 'HUDHide', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 383): {'name': 'HUDRemoveAllText', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 382): {'name': 'HUDRemoveText', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': [{'name': 'ID', 'offset': 0, 'type': 7}]}
+# (0, 381): {'name': 'HUDAddText', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': [{'name': 'ID', 'offset': 0, 'type': 7}]}
+# (0, 380): {'name': 'HUD', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 379): {'name': 'HUD', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 378): {'name': 'AIIsPlayerFrozen', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 377): {'name': 'AISetActiveAll', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 376): {'name': 'AISetActive', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 375): {'name': 'AIGetActive', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 374): {'name': 'AISetDebug', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 373): {'name': 'AISetMap', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 372): {'name': 'AISetProfile', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 371): {'name': 'AIGetProfile', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 370): {'name': 'AIGetDefaultProfile', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 369): {'name': 'AIGroupSetDebug', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': [{'name': 'bState', 'offset': 0, 'type': 6}]}
+# (0, 368): {'name': 'AIGroupGetActive', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 367): {'name': 'AIGroupSetActive', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': [{'name': 'bState', 'offset': 0, 'type': 6}]}
+# (0, 366): {'name': 'AIGroupSetHeat', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': [{'name': 'fClose', 'offset': 0, 'type': 5}, {'name': 'fRanged', 'offset': 4, 'type': 5}]}
+# (0, 365): {'name': 'AIGroupDetach', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 364): {'name': 'AIGroupAttach', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': [{'name': 'fClose', 'offset': 0, 'type': 5}, {'name': 'fRanged', 'offset': 4, 'type': 5}, {'name': 'fDefend', 'offset': 8, 'type': 5}, {'name': 'fImportance', 'offset': 12, 'type': 5}]}
+# (0, 363): {'name': 'AIGroupSelect', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': [{'name': 'sName', 'offset': 0, 'type': 7}]}
+# (0, 362): {'name': 'AIAddCommandReset', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 361): {'name': 'AIAddCommandPlayerFreeze', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 360): {'name': 'AIAddCommandPlayerRun', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 359): {'name': 'AIAddCommandWarp', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 358): {'name': 'AIAddCommandWarp', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 357): {'name': 'AIAddCommandAnimate', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 356): {'name': 'AIAddCommandLookTarget', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 355): {'name': 'AIAddCommandLookTarget', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 354): {'name': 'AIAddCommandLook', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 353): {'name': 'AIAddCommandLook', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 352): {'name': 'AIAddCommandGoto', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 351): {'name': 'AIAddCommandGoto', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 350): {'name': 'AIAddCommandGoto', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 349): {'name': 'AIAddCommandGoto', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 348): {'name': 'AIAddCommandGuard', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 347): {'name': 'AIAddCommandPrecision', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 346): {'name': 'AIAddCommandWait', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 345): {'name': 'AIResetSequence', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 344): {'name': 'AISetNodePrecision', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 343): {'name': 'AIGetState', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 342): {'name': 'AIInstantCalm', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 341): {'name': 'AIInstantEngage', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 340): {'name': 'AIInstantAttack', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 339): {'name': 'AIInstantAttack', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 338): {'name': 'AISetSequenceLoop', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 337): {'name': 'AISelectSequence', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 336): {'name': 'AISelect', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 335): {'name': 'AIQuery', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 334): {'name': '@AI_COMBAT', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 333): {'name': '@AI_ENGAGE', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 332): {'name': '@AI_NORMAL', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 331): {'name': '@AI_NONE', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 330): {'name': 'FsTraceLine', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': [{'name': 'a', 'offset': 0, 'type': 8}, {'name': 'b', 'offset': 12, 'type': 8}]}
+# (0, 329): {'name': 'FsDeductLives', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 328): {'name': 'FsAtRespawn', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 327): {'name': 'FuAddRespawnPoint', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 326): {'name': 'FuSetRespawnStageFromTargetable', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 325): {'name': 'FsSpawn', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': [{'name': 'sStage', 'offset': 0, 'type': 7}, {'name': 'sInstance', 'offset': 4, 'type': 7}]}
+# (0, 324): {'name': 'FsSpawn', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': [{'name': 'sInstance', 'offset': 0, 'type': 7}]}
+# (0, 323): {'name': 'FsStageLoaded', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': [{'name': 'sStage', 'offset': 0, 'type': 7}]}
+# (0, 322): {'name': 'FsSelectStage', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': [{'name': 'sStage', 'offset': 0, 'type': 7}]}
+# (0, 321): {'name': 'FsResetStage', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': [{'name': 'sStage', 'offset': 0, 'type': 7}]}
+# (0, 320): {'name': 'FsClearStage', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': [{'name': 'sStage', 'offset': 0, 'type': 7}]}
+# (0, 319): {'name': 'FsQuickSave', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 318): {'name': 'FsQuickLoad', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 317): {'name': 'FsIsBoxEmpty', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 316): {'name': 'FsPortalEnable', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 315): {'name': 'FsPortalDisable', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 314): {'name': 'FsObjVector', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 313): {'name': 'FsObjAngle', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 312): {'name': 'FsObjDistance', 'path': '..\\Futurama\\Script\\FuNative.fis', 'address': 20044, 'type': 0, 'unk4': 1, 'locals': [{'name': 'a', 'offset': 0, 'type': 7}, {'name': 'b', 'offset': 4, 'type': 7}]}
+# (0, 311): {'name': 'FsObjDistance_native', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 310): {'name': 'FsLevel5DeleteWasps', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 309): {'name': 'FsLevel5SpawnWaspBox', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 308): {'name': 'FsLevel5SpawnWasp', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 307): {'name': 'FsCreateLaser', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 306): {'name': 'FsCreateFireball', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': [{'name': 'offVect', 'offset': 4, 'type': 8}]}
+# (0, 305): {'name': 'FsCreateFireball', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 304): {'name': 'FsLinkMovement', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': [{'name': 'sStaticInstance', 'offset': 0, 'type': 7}, {'name': 'sNiNode', 'offset': 4, 'type': 7}]}
+# (0, 303): {'name': 'FsAttachRippleEffect', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': [{'name': 'sFloatDef', 'offset': 0, 'type': 7}, {'name': 'sTexture', 'offset': 4, 'type': 7}, {'name': 'fOffsetY', 'offset': 8, 'type': 5}]}
+# (0, 302): {'name': 'FsPutOutFireInSungodsHead', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 301): {'name': 'FsSetFireToSungodsHead', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 300): {'name': 'FsFireCircleDestroy', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 299): {'name': 'FsFireCircleCreate', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 298): {'name': 'FsFireCircleCopyDef', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 297): {'name': 'FsFireCircleCreateDef', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 296): {'name': 'FsFireCircleGetDef', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 295): {'name': 'FsCreateFire', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 294): {'name': 'FsCreateWood', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 293): {'name': 'FsCreateSmoke', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 292): {'name': 'FsSetLaserSpeed', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 291): {'name': 'FsCreateBombExplosion', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 290): {'name': 'FsCreateBigAirExplosion', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 289): {'name': 'FsCreateAirExplosion', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 288): {'name': 'FsCreateGreenGroundExplosion', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 287): {'name': 'FsCreateHugeGroundExplosion', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 286): {'name': 'FsCreateBigGroundExplosion', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 285): {'name': 'FsCreateGroundExplosion', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 284): {'name': 'FsSetParticlesEnable', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 283): {'name': 'FsPart3dChangeInstDef', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 282): {'name': 'FsPart3dCopyDef', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 281): {'name': 'FsPart3dCreateDef', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 280): {'name': 'FsPart3dGetDef', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 279): {'name': 'FsPartChangeInstDef', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 278): {'name': 'FsPartCopyDef', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 277): {'name': 'FsPartCreateDef', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 276): {'name': 'FsPartGetDef', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 275): {'name': 'FsGetStage', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 274): {'name': 'FsGetLevel', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 273): {'name': 'FsLightOutdoors', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': [{'name': 'major', 'offset': 0, 'type': 9}, {'name': 'minor', 'offset': 12, 'type': 9}]}
+# (0, 272): {'name': 'FsLightIndoors', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': [{'name': 'major', 'offset': 0, 'type': 9}, {'name': 'minor', 'offset': 12, 'type': 9}]}
+# (0, 271): {'name': 'FsPrepareCameraRail', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': [{'name': 'sMap', 'offset': 0, 'type': 7}, {'name': 'sStart', 'offset': 4, 'type': 7}]}
+# (0, 270): {'name': 'FsDisableKnarkEffect', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 269): {'name': 'FsSetKnarkEffect', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 268): {'name': 'FsGetCamShakeAmp', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 267): {'name': 'FsIsCamShaking', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 266): {'name': 'FsFShakeCam', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 265): {'name': 'FsFShakeCam', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 264): {'name': 'FsFlash', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 263): {'name': 'FsFadeIn', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 262): {'name': 'FsFadeIn', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 261): {'name': 'FsFadeOut', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 260): {'name': 'FsBlurSetScale', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 259): {'name': 'FsBlurSetAlpha', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 258): {'name': 'FsFogGetDistance', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 257): {'name': 'FsFogDisable', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 256): {'name': 'FsFogEnable', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 255): {'name': 'FsFogSetRelativeNode', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 254): {'name': 'FsFogSetDistance', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 253): {'name': 'FsFogSetColor', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 252): {'name': 'FsFogSetIntensity', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 251): {'name': 'FsSetMagnetEnabled', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 250): {'name': 'FsSetCamPreset', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 249): {'name': 'FsCamFlushTransform', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 248): {'name': 'FsCamPushTransform', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 247): {'name': 'FsCamPopTransform', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 246): {'name': 'FsSetPathToStaticTgtCam', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 245): {'name': 'FsSetPathToStaticTgtCam', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 244): {'name': 'FsSetPathToChaseCam', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 243): {'name': 'FsSetRailCam', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 242): {'name': 'FsSetFixedVectorCam', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 241): {'name': 'FsSetFixedVectorCam', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 240): {'name': 'FsSetSideCam', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 239): {'name': 'FsSetStaticCam', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 238): {'name': 'FsSetStaticCam', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 237): {'name': 'FsSetStaticCam', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 236): {'name': 'FsSetChaseCam', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 235): {'name': 'FsInstantResetChaseCam', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 234): {'name': 'FsResetChaseCam', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 233): {'name': 'FsAnimationSetLoop', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 232): {'name': 'FsRWStart', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': [{'name': 'sObj', 'offset': 0, 'type': 7}, {'name': 'sSeq', 'offset': 4, 'type': 7}]}
+# (0, 231): {'name': 'FsRWStart', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 230): {'name': 'FsFFEnd', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': [{'name': 'sObj', 'offset': 0, 'type': 7}, {'name': 'sSeq', 'offset': 4, 'type': 7}]}
+# (0, 229): {'name': 'FsFFEnd', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 228): {'name': 'FsAnimationPos', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 227): {'name': 'FsAnimationLength', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 226): {'name': 'FsCurrAnimationLength', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 225): {'name': 'FsResumeAnimation', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': [{'name': 'bReverse', 'offset': 4, 'type': 6}]}
+# (0, 224): {'name': 'FsPauseAnimation', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 223): {'name': 'FsStopAnimation', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 222): {'name': 'FsPlayLoopAnimation', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': [{'name': 'bReverse', 'offset': 8, 'type': 6}]}
+# (0, 221): {'name': 'FsPlayLoopAnimation', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 220): {'name': 'FsPlayAnimation', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': [{'name': 'bReverse', 'offset': 8, 'type': 6}]}
+# (0, 219): {'name': 'FsPlayAnimation', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 218): {'name': 'FsCleanRoom', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 217): {'name': 'FsSetTriggerHealth', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 216): {'name': 'FsGetTriggerHealth', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 215): {'name': 'FsTriggerHealth', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 214): {'name': 'FsTriggerHealth', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 213): {'name': 'FsTriggerNULL', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 212): {'name': 'FsTriggerNULL', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 211): {'name': 'FsTriggerAnimation', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 210): {'name': 'FsTriggerDestructable', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 209): {'name': 'FsTriggerAtSight', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 208): {'name': 'FsTriggerPickup', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 207): {'name': 'FsTriggerButton', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 206): {'name': '@eButtonStart', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 205): {'name': '@eButtonAttack2', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 204): {'name': '@eButtonAttack1', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 203): {'name': '@eButtonUse', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 202): {'name': '@eButtonJump', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 201): {'name': 'FsToggleSkeletonsInTrigger', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 200): {'name': 'FsSwitchLadderInsideBoxTrigger', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 199): {'name': 'FsSwitchEdgesInsideBoxTrigger', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 198): {'name': 'FsTriggerBox', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 197): {'name': 'FsGetTriggerDistance', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 196): {'name': 'FsTriggerSphere', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 195): {'name': 'FsTriggerSphere', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 194): {'name': 'FsRemoveTriggerFromGroup', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 193): {'name': 'FsAddTriggerToGroup', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 192): {'name': 'FsOrTriggerGroup', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 191): {'name': 'FsAndTriggerGroup', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 190): {'name': 'FsTriggerNULLify', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 189): {'name': 'operator(int)', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 188): {'name': 'FsGameSave', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 187): {'name': 'FsConsole', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 186): {'name': 'FsConsoleOutput', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 185): {'name': 'FsSetDebugOutput', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': [{'name': 'bEngine', 'offset': 0, 'type': 6}, {'name': 'bScript', 'offset': 4, 'type': 6}]}
+# (0, 184): {'name': 'FsDebugPrint', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 183): {'name': 'FsDebugPrint', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 182): {'name': 'FsDebugPrint', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 181): {'name': 'FsDebugPrint', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 180): {'name': 'FsDebugPrint', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 179): {'name': 'FsDebugPrint', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 178): {'name': 'FsDebugPrint', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 177): {'name': 'FsDebugPrint', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 176): {'name': 'FsDebugPrint', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 175): {'name': 'FsPrintAt', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 174): {'name': 'FsPrintAt', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 173): {'name': 'FsPrintAt', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 172): {'name': 'FsPrintAt', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 171): {'name': 'FsPrintAt', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 170): {'name': 'FsActivateFrontend', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 169): {'name': 'FsDisablePausing', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 168): {'name': 'FsEnablePausing', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 167): {'name': 'FsPlayCutscene', 'path': '..\\Futurama\\Script\\FuNative.fis', 'address': 20112, 'type': 0, 'unk4': 1, 'locals': [{'name': 'sName', 'offset': 0, 'type': 7}]}
+# (0, 166): {'name': 'FsStartCutscene', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 165): {'name': 'FsPrepareCutscene', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 164): {'name': 'FsPlayRTM', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 163): {'name': 'FsDemoEndLevel', 'path': '..\\Futurama\\Script\\FuNative.fis', 'address': 20188, 'type': 0, 'unk4': 1, 'locals': []}
+# (0, 162): {'name': 'FsDemoEndLevelNow', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 161): {'name': 'FsChangeLevel', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 160): {'name': 'FsReplayLevel', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 159): {'name': 'FsPlayerIsRolling', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 158): {'name': 'FsSetMaterialDamage', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 157): {'name': 'FsCharIsDead', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 156): {'name': 'FsCharIsOnGround', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 155): {'name': 'FsGetCannonCtrl', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 154): {'name': '@CANNON_AMMO_SHIELD_DEACTIVATOR', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 153): {'name': '@CANNON_AMMO_LASER', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 152): {'name': 'FsTriggerPlayerKilledEvent', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 151): {'name': 'FsCancelAllDialogues', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 150): {'name': 'FsPlayDialogue', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 149): {'name': 'FsPlayDialogue', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 148): {'name': 'FsIsCharacterSpeaking', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 147): {'name': 'FsCharacterSay', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 146): {'name': 'FsCharacterSay', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 145): {'name': 'FsIsLanguage', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 144): {'name': 'operator(int)', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 143): {'name': 'FsGetTank', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 142): {'name': '@Tank_Laser', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 141): {'name': 'FsFireCannon', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 140): {'name': 'FsFirePrimary', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 139): {'name': 'FsFireDestructorMissile', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 138): {'name': 'FsRearmDestructor', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 137): {'name': 'FsAddChickenRockets', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 136): {'name': 'FsGetMaxAmmoPlayer', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 135): {'name': 'FsGetAmmoPlayer', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 134): {'name': 'FsShieldTurret', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 133): {'name': 'FsSetChickenShake', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 132): {'name': 'FsSetChickenSleep', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 131): {'name': 'FsSetChickenSpeed', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 130): {'name': 'FsControlChicken', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 129): {'name': 'FsPausePlayerRumble', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': [{'name': 'bPaused', 'offset': 0, 'type': 6}]}
+# (0, 128): {'name': 'FsCharacterDoneDying', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 127): {'name': 'FsSetRodentCam', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 126): {'name': 'FsSetRodentSpeed', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 125): {'name': 'FsTurnWheel', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 124): {'name': 'FsPushButton', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 123): {'name': 'FsPullLever', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 122): {'name': 'FsIsCharacterControllable', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 121): {'name': 'FsCharacterControllable', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 120): {'name': 'FsCharacterControllable', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 119): {'name': 'FsCharacterCurrAnimLength', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 118): {'name': 'FsCharacterAnimLength', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 117): {'name': 'FsCharacterIsAnimating', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 116): {'name': 'FsCharacterAnimateSpeed', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 115): {'name': 'FsCharacterAnimateLoop', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 114): {'name': 'FsCharacterAnimate', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 113): {'name': 'FsHealCharacter', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 112): {'name': 'FsDamageCharacter', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 111): {'name': 'FsSetScaleCharacter', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 110): {'name': 'FsGetHealthCharacter', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 109): {'name': 'FsSetHealthCharacter', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 108): {'name': 'FsChangePlayer', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 107): {'name': 'FsCharacterIsClimbing', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 106): {'name': 'FsReleaseCharacterFromHold', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 105): {'name': 'FsSetDecomposeCorpses', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 104): {'name': 'FsIsVisible', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 103): {'name': 'FsStopAllOnTargetable', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 102): {'name': 'FsSetReverb', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 101): {'name': 'FsSetMinRadiusSound', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 100): {'name': 'FsSetRadiusSound', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 99): {'name': 'FsSetPanSound', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 98): {'name': 'FsSetPitchSound', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 97): {'name': 'FsSetVolumeSound', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 96): {'name': 'FsStopSampleAll', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 95): {'name': 'FsStopSound', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 94): {'name': 'FsStopAllSounds', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 93): {'name': 'FsPlaySpeech', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 92): {'name': 'FsPlayMusic', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 91): {'name': 'FsPlay3DSFX', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 90): {'name': 'FsPlaySFX', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 89): {'name': 'FsPlayResume', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 88): {'name': 'FsPlaySound', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 87): {'name': 'FsIsPlayingSound', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 86): {'name': 'FsIsPlayingSample', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 85): {'name': 'FsLoadSound', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 84): {'name': 'GetPlayerVelocity', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 83): {'name': 'FsPlayerSnapToNode', 'path': '..\\Futurama\\Script\\FuNative.fis', 'address': 20344, 'type': 0, 'unk4': 1, 'locals': [{'name': 'str', 'offset': 0, 'type': 7}]}
+# (0, 82): {'name': 'FsPlayerSnapToNode', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 81): {'name': 'FsIncNibblersPickedUp', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 80): {'name': 'FsDecNibblersPickedUp', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 79): {'name': 'FsGetNibblersPickedUp', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 78): {'name': 'FsGetCollPickedUp', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 77): {'name': 'FsSpawnBouncyPickup', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': [{'name': 'sDef', 'offset': 0, 'type': 7}, {'name': 'sWaypoint', 'offset': 4, 'type': 7}, {'name': 'sName', 'offset': 8, 'type': 7}, {'name': 'fPower', 'offset': 12, 'type': 5}]}
+# (0, 76): {'name': 'FsGivePickup', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': [{'name': 'sTargetName', 'offset': 0, 'type': 7}, {'name': 'sPickupDef', 'offset': 4, 'type': 7}, {'name': 'sPickupName', 'offset': 8, 'type': 7}]}
+# (0, 75): {'name': 'FsIsPickupPickupable', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 74): {'name': 'FsSetPickupPickupable', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 73): {'name': 'FsDeleteInstance', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 72): {'name': 'FsCreateInstance', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 71): {'name': 'FsShowTarget', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 70): {'name': 'FsHideTarget', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 69): {'name': 'FsSetRotate', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 68): {'name': 'FsSetRelTranslate', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 67): {'name': 'FsGetTranslate', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 66): {'name': 'FsSetTranslate', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 65): {'name': 'FsSetTranslate', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 64): {'name': 'FsSetTransform', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 63): {'name': 'FsLookAt', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 62): {'name': 'FsLookAt', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 61): {'name': 'Color', 'path': '..\\Futurama\\Script\\FuNative.fis', 'address': 20392, 'type': 0, 'unk4': 1, 'locals': [{'name': 'set_r', 'offset': 0, 'type': 5}, {'name': 'set_g', 'offset': 4, 'type': 5}, {'name': 'set_b', 'offset': 8, 'type': 5}, {'name': 'col', 'offset': 12, 'type': 9}]}
+# (0, 60): {'name': 'rand', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 59): {'name': 'abs', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 58): {'name': 'cos', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 57): {'name': 'sin', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 56): {'name': 'sqrt', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 55): {'name': 'operator<', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 54): {'name': 'operator>', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 53): {'name': 'operator<=', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 52): {'name': 'operator>=', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 51): {'name': 'operator!=', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 50): {'name': 'operator==', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 49): {'name': 'operator*', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 48): {'name': 'operator/', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 47): {'name': 'operator-', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 46): {'name': 'operator+', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 45): {'name': 'operator<', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 44): {'name': 'operator>', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 43): {'name': 'operator<=', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 42): {'name': 'operator>=', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 41): {'name': 'operator!=', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 40): {'name': 'operator==', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 39): {'name': 'operator*', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 38): {'name': 'operator/', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 37): {'name': 'operator-', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 36): {'name': 'operator+', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 35): {'name': 'operator(int)', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 34): {'name': 'operator!=', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 33): {'name': 'operator==', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 32): {'name': 'operator<', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 31): {'name': 'operator>', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 30): {'name': 'operator<=', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 29): {'name': 'operator>=', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 28): {'name': 'operator!=', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 27): {'name': 'operator==', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 26): {'name': 'operator*', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 25): {'name': 'operator/', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 24): {'name': 'operator-', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 23): {'name': 'operator+', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 22): {'name': 'operator!', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 21): {'name': 'operator-', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 20): {'name': 'operator(bool)', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 19): {'name': 'operator(float)', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 18): {'name': 'operator<', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 17): {'name': 'operator>', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 16): {'name': 'operator<=', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 15): {'name': 'operator>=', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 14): {'name': 'operator!=', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 13): {'name': 'operator==', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 12): {'name': 'operator*', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 11): {'name': 'operator/', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 10): {'name': 'operator-', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 9): {'name': 'operator+', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 8): {'name': 'operator!', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 7): {'name': 'operator-', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 6): {'name': 'operator(int)', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 5): {'name': 'strstr', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 4): {'name': 'operator!=', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (0, 3): {'name': 'operator==', 'path': '', 'address': 0, 'type': 0, 'unk4': 2, 'locals': []}
+# (41, 1): {'name': 'StageCommon', 'path': 'Level1\\Level1-1\\Level1-1Common.fis', 'address': 20476, 'type': 41, 'unk4': 17, 'locals': []}
+# (40, 50): {'name': 'OnToolrackFull', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 20496, 'type': 40, 'unk4': 1, 'locals': []}
+# (40, 49): {'name': 'PlaceTool', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 20740, 'type': 40, 'unk4': 1, 'locals': [{'name': 'anim', 'offset': 0, 'type': 7}, {'name': 'seq', 'offset': 4, 'type': 7}, {'name': 'sound', 'offset': 8, 'type': 4}]}
+# (40, 48): {'name': '@@action@@aPickupHammer', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 22148, 'type': 40, 'unk4': 385, 'locals': []}
+# (40, 47): {'name': '@@action@@aPreloadHammerCutscene', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 22632, 'type': 40, 'unk4': 385, 'locals': []}
+# (40, 46): {'name': 'RunPickupHammerSequence', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 23480, 'type': 40, 'unk4': 1, 'locals': []}
+# (40, 45): {'name': 'RunSewerSounds', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 23784, 'type': 40, 'unk4': 129, 'locals': [{'name': 't_grating', 'offset': 0, 'type': 12}, {'name': 'which_sound', 'offset': 4, 'type': 4}]}
+# (40, 44): {'name': '@@action@@aHangarButton', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 24144, 'type': 40, 'unk4': 385, 'locals': []}
+# (40, 43): {'name': '@@action@@aBenderClose', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 24248, 'type': 40, 'unk4': 385, 'locals': []}
+# (40, 42): {'name': '@@action@@aCabin2Open', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 24504, 'type': 40, 'unk4': 385, 'locals': []}
+# (40, 41): {'name': 'RunBenderHit', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 24628, 'type': 40, 'unk4': 129, 'locals': [{'name': 't_hurt', 'offset': 0, 'type': 12}, {'name': 'line', 'offset': 4, 'type': 7}, {'name': 'r', 'offset': 8, 'type': 5}]}
+# (40, 40): {'name': 'RunBender', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 25212, 'type': 40, 'unk4': 129, 'locals': [{'name': 'line', 'offset': 0, 'type': 7}, {'name': 'r', 'offset': 4, 'type': 5}]}
+# (40, 39): {'name': '@@action@@aLabSteam', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 26092, 'type': 40, 'unk4': 385, 'locals': []}
+# (40, 38): {'name': '@@action@@aDoorInnerZoid', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 26196, 'type': 40, 'unk4': 385, 'locals': [{'name': 't_inside', 'offset': 0, 'type': 12}]}
+# (40, 37): {'name': '@@action@@aHermes', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 26664, 'type': 40, 'unk4': 385, 'locals': [{'name': 't_hit', 'offset': 0, 'type': 12}]}
+# (40, 36): {'name': '@@action@@aPaperMachineDead', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 27144, 'type': 40, 'unk4': 385, 'locals': []}
+# (40, 35): {'name': '@@action@@aPaperMachine', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 27448, 'type': 40, 'unk4': 385, 'locals': []}
+# (40, 34): {'name': '@@action@@aEgg', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 28580, 'type': 40, 'unk4': 385, 'locals': [{'name': 'eggdoor', 'offset': 0, 'type': 27}, {'name': 't_next', 'offset': 216, 'type': 12}, {'name': 't_hit', 'offset': 220, 'type': 12}]}
+# (40, 33): {'name': '@@action@@aShower', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 29876, 'type': 40, 'unk4': 385, 'locals': [{'name': 't_stuck', 'offset': 0, 'type': 12}]}
+# (40, 32): {'name': '@@action@@aWaitFridge', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 31092, 'type': 40, 'unk4': 385, 'locals': []}
+# (40, 31): {'name': '@@action@@aHologramToggle', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 31416, 'type': 40, 'unk4': 385, 'locals': [{'name': 'state', 'offset': 0, 'type': 4}, {'name': 'sound', 'offset': 4, 'type': 4}]}
+# (40, 30): {'name': '@@action@@aZoidHart', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 31784, 'type': 40, 'unk4': 385, 'locals': [{'name': 'sound', 'offset': 0, 'type': 4}, {'name': 't_zoid', 'offset': 4, 'type': 12}]}
+# (40, 29): {'name': '@@action@@aCableSounds', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 32244, 'type': 40, 'unk4': 385, 'locals': [{'name': 'sound1', 'offset': 0, 'type': 4}, {'name': 'sound2', 'offset': 4, 'type': 4}, {'name': 'sound3', 'offset': 8, 'type': 4}, {'name': 'sound4', 'offset': 12, 'type': 4}, {'name': 'sound5', 'offset': 16, 'type': 4}, {'name': 'sound6', 'offset': 20, 'type': 4}, {'name': 'sound7', 'offset': 24, 'type': 4}, {'name': 'sound8', 'offset': 28, 'type': 4}, {'name': 'sound9', 'offset': 32, 'type': 4}, {'name': 't_zoid', 'offset': 36, 'type': 12}, {'name': 't_herm', 'offset': 40, 'type': 12}, {'name': 't_lobby', 'offset': 44, 'type': 12}, {'name': 't_topfloor', 'offset': 48, 'type': 12}]}
+# (40, 28): {'name': '@@action@@aBoilerSounds', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 34408, 'type': 40, 'unk4': 385, 'locals': [{'name': 't_boiler', 'offset': 0, 'type': 12}, {'name': 'sound1', 'offset': 4, 'type': 4}, {'name': 'sound2', 'offset': 8, 'type': 4}]}
+# (40, 27): {'name': '@@action@@aEnterBoil', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 35044, 'type': 40, 'unk4': 385, 'locals': []}
+# (40, 26): {'name': '@@action@@aHandbookBox', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 35224, 'type': 40, 'unk4': 385, 'locals': [{'name': 't_break', 'offset': 0, 'type': 12}]}
+# (40, 25): {'name': '@@action@@aKeycardBox', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 35420, 'type': 40, 'unk4': 385, 'locals': [{'name': 't_break', 'offset': 0, 'type': 12}]}
+# (40, 24): {'name': '@@action@@aDeath', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 35616, 'type': 40, 'unk4': 385, 'locals': []}
+# (40, 23): {'name': 'RunToolHint', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 35788, 'type': 40, 'unk4': 129, 'locals': [{'name': 't_near', 'offset': 0, 'type': 12}]}
+# (40, 22): {'name': '@@action@@aFirewindowDestroyed', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 36404, 'type': 40, 'unk4': 385, 'locals': []}
+# (40, 21): {'name': '@@action@@aOpenHermesLocker', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 36540, 'type': 40, 'unk4': 385, 'locals': []}
+# (40, 20): {'name': '@@action@@aOpenBenderLocker', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 37124, 'type': 40, 'unk4': 385, 'locals': []}
+# (40, 19): {'name': '@@action@@aOpenLeelaLocker', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 37544, 'type': 40, 'unk4': 385, 'locals': []}
+# (40, 18): {'name': '@@action@@aDestroyLeelaLock', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 37736, 'type': 40, 'unk4': 385, 'locals': [{'name': 't_hammer', 'offset': 0, 'type': 12}, {'name': 't_lock_break', 'offset': 4, 'type': 12}]}
+# (40, 17): {'name': '@@action@@aRollTheHead', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 38416, 'type': 40, 'unk4': 385, 'locals': []}
+# (40, 16): {'name': '@@action@@aUnlockHangarDoors', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 38692, 'type': 40, 'unk4': 385, 'locals': []}
+# (40, 15): {'name': '@@action@@aUnlockHermesDoor', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 40036, 'type': 40, 'unk4': 385, 'locals': []}
+# (40, 14): {'name': '@@action@@aTryOpenEntranceDoor', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 40416, 'type': 40, 'unk4': 385, 'locals': [{'name': 'sound', 'offset': 0, 'type': 4}]}
+# (40, 13): {'name': '@@action@@aStart', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 40776, 'type': 40, 'unk4': 385, 'locals': []}
+# (40, 12): {'name': 'StartSteamC', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 40984, 'type': 40, 'unk4': 129, 'locals': [{'name': 'wait_on', 'offset': 0, 'type': 5}, {'name': 'wait_off', 'offset': 4, 'type': 5}, {'name': 'offset', 'offset': 8, 'type': 5}]}
+# (40, 11): {'name': 'StartSteamB', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 41380, 'type': 40, 'unk4': 129, 'locals': [{'name': 'wait_on', 'offset': 0, 'type': 5}, {'name': 'wait_off', 'offset': 4, 'type': 5}, {'name': 'offset', 'offset': 8, 'type': 5}]}
+# (40, 10): {'name': 'StartSteamA', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 41612, 'type': 40, 'unk4': 129, 'locals': [{'name': 'wait_on', 'offset': 0, 'type': 5}, {'name': 'wait_off', 'offset': 4, 'type': 5}, {'name': 'offset', 'offset': 8, 'type': 5}]}
+# (40, 9): {'name': 'StartWindowAnims', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 41988, 'type': 40, 'unk4': 129, 'locals': [{'name': 'b_first', 'offset': 0, 'type': 4}, {'name': 'r', 'offset': 4, 'type': 5}]}
+# (40, 8): {'name': 'InitOwls', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 42944, 'type': 40, 'unk4': 1, 'locals': []}
+# (40, 7): {'name': 'InitSteam', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 43476, 'type': 40, 'unk4': 1, 'locals': []}
+# (40, 6): {'name': 'InitSounds', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 43704, 'type': 40, 'unk4': 1, 'locals': []}
+# (40, 5): {'name': 'InitTools', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 43724, 'type': 40, 'unk4': 1, 'locals': []}
+# (40, 4): {'name': 'InitHints', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 45548, 'type': 40, 'unk4': 1, 'locals': []}
+# (40, 3): {'name': 'InitAnim', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 47344, 'type': 40, 'unk4': 1, 'locals': []}
+# (40, 2): {'name': 'Die', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 47660, 'type': 40, 'unk4': 33, 'locals': []}
+# (40, 1): {'name': 'StageA', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 49132, 'type': 40, 'unk4': 17, 'locals': []}
+# (39, 5): {'name': 'RunBreak', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 63124, 'type': 39, 'unk4': 129, 'locals': [{'name': 't_break', 'offset': 0, 'type': 12}]}
+# (39, 4): {'name': '@@action@@aInteract', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 63576, 'type': 39, 'unk4': 385, 'locals': [{'name': 'sound', 'offset': 0, 'type': 4}]}
+# (39, 3): {'name': 'Init', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 64456, 'type': 39, 'unk4': 1, 'locals': [{'name': 'soundOn', 'offset': 0, 'type': 4}, {'name': 'soundOff', 'offset': 4, 'type': 4}, {'name': 'soundNoise', 'offset': 8, 'type': 4}, {'name': 'soundBreak', 'offset': 12, 'type': 4}]}
+# (39, 2): {'name': 'Die', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 64540, 'type': 39, 'unk4': 33, 'locals': []}
+# (39, 1): {'name': 'Tv', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 64600, 'type': 39, 'unk4': 17, 'locals': []}
+# (38, 2): {'name': '@@Destruct@@', 'path': 'Level1\\Level1-1\\Level1-1A.fih', 'address': 64856, 'type': 38, 'unk4': 33, 'locals': []}
+# (38, 1): {'name': '@@Default@@', 'path': 'Level1\\Level1-1\\Level1-1A.fih', 'address': 64876, 'type': 38, 'unk4': 17, 'locals': []}
+# (38, 6): {'name': 'TurnOff', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 64920, 'type': 38, 'unk4': 1, 'locals': []}
+# (38, 5): {'name': 'TurnOn', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 65144, 'type': 38, 'unk4': 1, 'locals': []}
+# (38, 4): {'name': '@@action@@aInteract', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 65452, 'type': 38, 'unk4': 385, 'locals': []}
+# (38, 3): {'name': 'Init', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 66044, 'type': 38, 'unk4': 1, 'locals': [{'name': 'node', 'offset': 0, 'type': 7}, {'name': 'anim', 'offset': 4, 'type': 7}, {'name': 'seqOn', 'offset': 8, 'type': 7}, {'name': 'seqOff', 'offset': 12, 'type': 7}, {'name': 'seqRun', 'offset': 16, 'type': 7}, {'name': 'soundOn', 'offset': 20, 'type': 4}, {'name': 'soundOff', 'offset': 24, 'type': 4}, {'name': 'soundRun', 'offset': 28, 'type': 4}]}
+# (37, 2): {'name': '@@Destruct@@', 'path': 'Level1\\Level1-1\\Level1-1A.fih', 'address': 66272, 'type': 37, 'unk4': 33, 'locals': []}
+# (37, 5): {'name': '@@action@@aOpenCover', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 66292, 'type': 37, 'unk4': 385, 'locals': [{'name': 'hint_id', 'offset': 0, 'type': 4}, {'name': 'sound', 'offset': 4, 'type': 4}, {'name': 't_fan_top', 'offset': 8, 'type': 12}]}
+# (37, 4): {'name': '@@action@@aPressFanButton', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 67764, 'type': 37, 'unk4': 385, 'locals': [{'name': 't_window', 'offset': 0, 'type': 12}, {'name': 't_anim', 'offset': 4, 'type': 12}, {'name': 'anim_length', 'offset': 8, 'type': 5}, {'name': 'pitch', 'offset': 12, 'type': 5}, {'name': 'hint_id', 'offset': 16, 'type': 4}]}
+# (37, 3): {'name': '@@action@@aStart', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 70156, 'type': 37, 'unk4': 385, 'locals': []}
+# (37, 1): {'name': 'FanControl', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 70504, 'type': 37, 'unk4': 17, 'locals': []}
+# (36, 2): {'name': '@@Destruct@@', 'path': 'Level1\\Level1-1\\Level1-1A.fih', 'address': 70736, 'type': 36, 'unk4': 33, 'locals': []}
+# (36, 6): {'name': 'Run', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 70776, 'type': 36, 'unk4': 129, 'locals': []}
+# (36, 5): {'name': 'Disable', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 71052, 'type': 36, 'unk4': 1, 'locals': []}
+# (36, 4): {'name': 'Enable', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 71092, 'type': 36, 'unk4': 1, 'locals': []}
+# (36, 3): {'name': 'Init', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 71132, 'type': 36, 'unk4': 1, 'locals': [{'name': 'name', 'offset': 0, 'type': 7}, {'name': '_sndOnPickup', 'offset': 4, 'type': 4}, {'name': '_placeAnim', 'offset': 8, 'type': 7}, {'name': '_placeUp', 'offset': 12, 'type': 7}, {'name': 'node', 'offset': 16, 'type': 7}, {'name': '_tToolrack', 'offset': 20, 'type': 12}]}
+# (36, 1): {'name': 'Tool', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 71292, 'type': 36, 'unk4': 17, 'locals': []}
+# (35, 2): {'name': '@@Destruct@@', 'path': 'Level1\\Level1-1\\Level1-1A.fih', 'address': 71344, 'type': 35, 'unk4': 33, 'locals': []}
+# (35, 8): {'name': 'Run', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 71364, 'type': 35, 'unk4': 129, 'locals': []}
+# (35, 7): {'name': 'Close', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 71940, 'type': 35, 'unk4': 1, 'locals': []}
+# (35, 6): {'name': 'Open', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 72260, 'type': 35, 'unk4': 1, 'locals': []}
+# (35, 5): {'name': 'Unlock', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 72656, 'type': 35, 'unk4': 1, 'locals': []}
+# (35, 4): {'name': 'Lock', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 72832, 'type': 35, 'unk4': 1, 'locals': []}
+# (35, 3): {'name': 'Init', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 72992, 'type': 35, 'unk4': 1, 'locals': [{'name': 'trigger', 'offset': 0, 'type': 7}, {'name': 'triggerOpen', 'offset': 4, 'type': 7}, {'name': 'node', 'offset': 8, 'type': 7}, {'name': 'object', 'offset': 12, 'type': 7}, {'name': 'openAnim', 'offset': 16, 'type': 7}, {'name': 'closeAnim', 'offset': 20, 'type': 7}, {'name': 'openSound', 'offset': 24, 'type': 4}, {'name': 'closeSound', 'offset': 28, 'type': 4}, {'name': 'lockedSound', 'offset': 32, 'type': 4}]}
+# (35, 1): {'name': 'Locker', 'path': 'Level1\\Level1-1\\Level1-1A.fis', 'address': 73400, 'type': 35, 'unk4': 17, 'locals': []}
+# (34, 16): {'name': 'FsSound_AmbientBlipp2', 'path': 'Level1\\Level1-1\\Level1-1Sounds.fis', 'address': 73544, 'type': 34, 'unk4': 1, 'locals': []}
+# (34, 15): {'name': 'FsSound_AmbientBlipp1', 'path': 'Level1\\Level1-1\\Level1-1Sounds.fis', 'address': 73632, 'type': 34, 'unk4': 1, 'locals': []}
+# (34, 14): {'name': 'FsSound_AmbientBubbleLoop', 'path': 'Level1\\Level1-1\\Level1-1Sounds.fis', 'address': 73720, 'type': 34, 'unk4': 1, 'locals': []}
+# (34, 13): {'name': 'FsSound_AmbientSpark3', 'path': 'Level1\\Level1-1\\Level1-1Sounds.fis', 'address': 73808, 'type': 34, 'unk4': 1, 'locals': []}
+# (34, 12): {'name': 'FsSound_AmbientSpark2', 'path': 'Level1\\Level1-1\\Level1-1Sounds.fis', 'address': 73828, 'type': 34, 'unk4': 1, 'locals': []}
+# (34, 11): {'name': 'FsSound_AmbientSpark1', 'path': 'Level1\\Level1-1\\Level1-1Sounds.fis', 'address': 73848, 'type': 34, 'unk4': 1, 'locals': []}
+# (34, 10): {'name': 'FsSound_AmbientKnasterLoop2', 'path': 'Level1\\Level1-1\\Level1-1Sounds.fis', 'address': 73868, 'type': 34, 'unk4': 1, 'locals': []}
+# (34, 9): {'name': 'FsSound_AmbientKnasterLoop1', 'path': 'Level1\\Level1-1\\Level1-1Sounds.fis', 'address': 73888, 'type': 34, 'unk4': 1, 'locals': []}
+# (34, 8): {'name': 'FsSound_AmbientHumLoop2', 'path': 'Level1\\Level1-1\\Level1-1Sounds.fis', 'address': 73908, 'type': 34, 'unk4': 1, 'locals': []}
+# (34, 7): {'name': 'FsSound_AmbientHumLoop1', 'path': 'Level1\\Level1-1\\Level1-1Sounds.fis', 'address': 73992, 'type': 34, 'unk4': 1, 'locals': []}
+# (34, 6): {'name': 'FsSound_AmbientComputer', 'path': 'Level1\\Level1-1\\Level1-1Sounds.fis', 'address': 74076, 'type': 34, 'unk4': 1, 'locals': []}
+# (34, 5): {'name': 'FsSound_AmbientWeirdMachine', 'path': 'Level1\\Level1-1\\Level1-1Sounds.fis', 'address': 74168, 'type': 34, 'unk4': 1, 'locals': []}
+# (34, 4): {'name': 'FsSound_AmbientOilBubbleBurst', 'path': 'Level1\\Level1-1\\Level1-1Sounds.fis', 'address': 74260, 'type': 34, 'unk4': 1, 'locals': []}
+# (34, 3): {'name': 'FsSound_AmbientSteamFromPipe', 'path': 'Level1\\Level1-1\\Level1-1Sounds.fis', 'address': 74484, 'type': 34, 'unk4': 1, 'locals': []}
+# (34, 1): {'name': 'Sounds', 'path': 'Level1\\Level1-1\\Level1-1Sounds.fis', 'address': 74648, 'type': 34, 'unk4': 17, 'locals': []}
+# (33, 4): {'name': 'Init', 'path': 'std\\NPC\\stdStatic.fis', 'address': 81312, 'type': 33, 'unk4': 1, 'locals': [{'name': 'instanceName', 'offset': 0, 'type': 7}, {'name': 'disabled', 'offset': 4, 'type': 4}]}
+# (33, 3): {'name': 'Init', 'path': 'std\\NPC\\stdStatic.fis', 'address': 81428, 'type': 33, 'unk4': 1, 'locals': [{'name': 'instanceName', 'offset': 0, 'type': 7}]}
+# (33, 1): {'name': 'StaticNpc', 'path': 'std\\NPC\\stdStatic.fis', 'address': 81484, 'type': 33, 'unk4': 17, 'locals': []}
+# (32, 2): {'name': '@@Destruct@@', 'path': 'std\\Object\\stdSlurmMachine.fis', 'address': 81504, 'type': 32, 'unk4': 33, 'locals': []}
+# (32, 5): {'name': '@@action@@aInteract', 'path': 'std\\Object\\stdSlurmMachine.fis', 'address': 81524, 'type': 32, 'unk4': 385, 'locals': []}
+# (32, 4): {'name': 'SetTrigger', 'path': 'std\\Object\\stdSlurmMachine.fis', 'address': 82120, 'type': 32, 'unk4': 1, 'locals': [{'name': 'trigger', 'offset': 0, 'type': 7}]}
+# (32, 3): {'name': 'Init', 'path': 'std\\Object\\stdSlurmMachine.fis', 'address': 82316, 'type': 32, 'unk4': 1, 'locals': [{'name': 'node', 'offset': 0, 'type': 7}, {'name': 'anim', 'offset': 4, 'type': 7}, {'name': 'seqPress', 'offset': 8, 'type': 7}, {'name': 'seqHide', 'offset': 12, 'type': 7}, {'name': 'sound', 'offset': 16, 'type': 4}, {'name': 'slurmName', 'offset': 20, 'type': 7}]}
+# (32, 1): {'name': 'SlurmMachine', 'path': 'std\\Object\\stdSlurmMachine.fis', 'address': 82552, 'type': 32, 'unk4': 17, 'locals': []}
+# (31, 6): {'name': '@@action@@aButton', 'path': 'std\\Object\\stdSurveillance.fis', 'address': 82640, 'type': 31, 'unk4': 385, 'locals': []}
+# (31, 5): {'name': 'ShowCamera', 'path': 'std\\Object\\stdSurveillance.fis', 'address': 83232, 'type': 31, 'unk4': 1, 'locals': [{'name': 'nodeCam', 'offset': 0, 'type': 7}, {'name': 'nodeTarg', 'offset': 4, 'type': 7}, {'name': 'b_but', 'offset': 8, 'type': 4}]}
+# (31, 4): {'name': 'Add', 'path': 'std\\Object\\stdSurveillance.fis', 'address': 83652, 'type': 31, 'unk4': 129, 'locals': [{'name': 'nodeCam', 'offset': 0, 'type': 7}, {'name': 'nodeTarg', 'offset': 4, 'type': 7}, {'name': 'id', 'offset': 8, 'type': 4}]}
+# (31, 3): {'name': 'Init', 'path': 'std\\Object\\stdSurveillance.fis', 'address': 83896, 'type': 31, 'unk4': 1, 'locals': [{'name': 'node', 'offset': 0, 'type': 7}, {'name': 'object', 'offset': 4, 'type': 7}, {'name': 'seqOn', 'offset': 8, 'type': 7}, {'name': 'seqOff', 'offset': 12, 'type': 7}, {'name': 'cameraSound', 'offset': 16, 'type': 4}]}
+# (31, 2): {'name': 'Die', 'path': 'std\\Object\\stdSurveillance.fis', 'address': 84088, 'type': 31, 'unk4': 33, 'locals': []}
+# (31, 1): {'name': 'Surveillance', 'path': 'std\\Object\\stdSurveillance.fis', 'address': 84168, 'type': 31, 'unk4': 17, 'locals': []}
+# (30, 18): {'name': '@@action@@aInteract', 'path': 'std\\Object\\stdButtonObject.fis', 'address': 84272, 'type': 30, 'unk4': 385, 'locals': []}
+# (30, 17): {'name': 'IsActive', 'path': 'std\\Object\\stdButtonObject.fis', 'address': 84660, 'type': 30, 'unk4': 1, 'locals': []}
+# (30, 16): {'name': 'DeActivate', 'path': 'std\\Object\\stdButtonObject.fis', 'address': 84696, 'type': 30, 'unk4': 1, 'locals': []}
+# (30, 15): {'name': 'Activate', 'path': 'std\\Object\\stdButtonObject.fis', 'address': 85292, 'type': 30, 'unk4': 1, 'locals': []}
+# (30, 14): {'name': 'Disable', 'path': 'std\\Object\\stdButtonObject.fis', 'address': 86040, 'type': 30, 'unk4': 1, 'locals': []}
+# (30, 13): {'name': 'Enable', 'path': 'std\\Object\\stdButtonObject.fis', 'address': 86076, 'type': 30, 'unk4': 1, 'locals': []}
+# (30, 12): {'name': 'WaitGiveCollectible', 'path': 'std\\Object\\stdButtonObject.fis', 'address': 86112, 'type': 30, 'unk4': 129, 'locals': [{'name': 'time', 'offset': 0, 'type': 5}]}
+# (30, 11): {'name': 'SetSounds', 'path': 'std\\Object\\stdButtonObject.fis', 'address': 86196, 'type': 30, 'unk4': 1, 'locals': [{'name': 'buttonId1', 'offset': 0, 'type': 4}, {'name': 'buttonId2', 'offset': 4, 'type': 4}, {'name': 'id1', 'offset': 8, 'type': 4}]}
+# (30, 10): {'name': 'SetSounds', 'path': 'std\\Object\\stdButtonObject.fis', 'address': 86264, 'type': 30, 'unk4': 1, 'locals': [{'name': 'buttonId1', 'offset': 0, 'type': 4}, {'name': 'buttonId2', 'offset': 4, 'type': 4}, {'name': 'id1', 'offset': 8, 'type': 4}, {'name': 'id2', 'offset': 12, 'type': 4}]}
+# (30, 9): {'name': 'SetCollectibleInside', 'path': 'std\\Object\\stdButtonObject.fis', 'address': 86348, 'type': 30, 'unk4': 1, 'locals': [{'name': 'instanceType', 'offset': 0, 'type': 7}, {'name': 'spawnWaitDivider', 'offset': 4, 'type': 5}]}
+# (30, 8): {'name': 'SetCollectibleInside', 'path': 'std\\Object\\stdButtonObject.fis', 'address': 86416, 'type': 30, 'unk4': 1, 'locals': [{'name': 'instanceType', 'offset': 0, 'type': 7}]}
+# (30, 7): {'name': 'SetPickupInside', 'path': 'std\\Object\\stdButtonObject.fis', 'address': 86472, 'type': 30, 'unk4': 1, 'locals': [{'name': 'instanceName', 'offset': 0, 'type': 7}]}
+# (30, 6): {'name': 'SetAnim', 'path': 'std\\Object\\stdButtonObject.fis', 'address': 86580, 'type': 30, 'unk4': 1, 'locals': [{'name': 'anim', 'offset': 0, 'type': 7}]}
+# (30, 5): {'name': 'SetTrigger', 'path': 'std\\Object\\stdButtonObject.fis', 'address': 86632, 'type': 30, 'unk4': 1, 'locals': [{'name': 'triggerName', 'offset': 0, 'type': 7}]}
+# (30, 4): {'name': 'Init', 'path': 'std\\Object\\stdButtonObject.fis', 'address': 86728, 'type': 30, 'unk4': 1, 'locals': [{'name': 'nodeName', 'offset': 0, 'type': 7}, {'name': 'buttonAnim', 'offset': 4, 'type': 7}, {'name': 'sequence1', 'offset': 8, 'type': 7}, {'name': 'sequence2', 'offset': 12, 'type': 7}, {'name': 'objectAnim', 'offset': 16, 'type': 7}, {'name': 'sequence3', 'offset': 20, 'type': 7}, {'name': 'sequence4', 'offset': 24, 'type': 7}]}
+# (30, 3): {'name': 'Init', 'path': 'std\\Object\\stdButtonObject.fis', 'address': 86876, 'type': 30, 'unk4': 1, 'locals': [{'name': 'nodeName', 'offset': 0, 'type': 7}, {'name': 'buttonAnim', 'offset': 4, 'type': 7}, {'name': 'sequence1', 'offset': 8, 'type': 7}, {'name': 'sequence2', 'offset': 12, 'type': 7}, {'name': 'objectAnim', 'offset': 16, 'type': 7}, {'name': 'sequence3', 'offset': 20, 'type': 7}]}
+# (30, 2): {'name': 'Die', 'path': 'std\\Object\\stdButtonObject.fis', 'address': 87140, 'type': 30, 'unk4': 33, 'locals': []}
+# (30, 1): {'name': 'ButtonObject', 'path': 'std\\Object\\stdButtonObject.fis', 'address': 87192, 'type': 30, 'unk4': 17, 'locals': []}
+# (29, 2): {'name': '@@Destruct@@', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 87376, 'type': 29, 'unk4': 33, 'locals': []}
+# (29, 35): {'name': '@@action@@aInteract', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 87396, 'type': 29, 'unk4': 385, 'locals': []}
+# (29, 34): {'name': 'QuickOff', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 88692, 'type': 29, 'unk4': 1, 'locals': []}
+# (29, 33): {'name': 'QuickOn', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 88800, 'type': 29, 'unk4': 1, 'locals': []}
+# (29, 32): {'name': 'Off', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 88908, 'type': 29, 'unk4': 1, 'locals': [{'name': 'bInteract', 'offset': 0, 'type': 4}]}
+# (29, 31): {'name': 'On', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 90024, 'type': 29, 'unk4': 1, 'locals': [{'name': 'bInteract', 'offset': 0, 'type': 4}]}
+# (29, 30): {'name': 'Off', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 91300, 'type': 29, 'unk4': 1, 'locals': []}
+# (29, 29): {'name': 'On', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 91348, 'type': 29, 'unk4': 1, 'locals': []}
+# (29, 28): {'name': 'IsChanged', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 91396, 'type': 29, 'unk4': 1, 'locals': [{'name': 'old_state', 'offset': 0, 'type': 4}]}
+# (29, 27): {'name': 'EnableOnce', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 91484, 'type': 29, 'unk4': 1, 'locals': []}
+# (29, 26): {'name': 'Disable', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 91520, 'type': 29, 'unk4': 1, 'locals': []}
+# (29, 25): {'name': 'Enable', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 91684, 'type': 29, 'unk4': 1, 'locals': []}
+# (29, 24): {'name': 'DisableSnap', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 91768, 'type': 29, 'unk4': 1, 'locals': []}
+# (29, 23): {'name': 'EnableSnap', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 91804, 'type': 29, 'unk4': 1, 'locals': []}
+# (29, 22): {'name': 'WaitGiveCollectible', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 91840, 'type': 29, 'unk4': 129, 'locals': [{'name': 'time', 'offset': 0, 'type': 5}]}
+# (29, 21): {'name': 'SetSoundPitch', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 91924, 'type': 29, 'unk4': 1, 'locals': [{'name': 'pitch', 'offset': 0, 'type': 5}]}
+# (29, 20): {'name': 'SetSounds', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 91960, 'type': 29, 'unk4': 1, 'locals': [{'name': 'id1', 'offset': 0, 'type': 4}, {'name': 'id2', 'offset': 4, 'type': 4}]}
+# (29, 19): {'name': 'SetSound', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 92012, 'type': 29, 'unk4': 1, 'locals': [{'name': 'id', 'offset': 0, 'type': 4}]}
+# (29, 18): {'name': 'SetCollectibleInside', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 92048, 'type': 29, 'unk4': 1, 'locals': [{'name': 'instanceType', 'offset': 0, 'type': 7}, {'name': 'spawnWaitDivider', 'offset': 4, 'type': 5}]}
+# (29, 17): {'name': 'SetCollectibleInside', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 92116, 'type': 29, 'unk4': 1, 'locals': [{'name': 'instanceType', 'offset': 0, 'type': 7}]}
+# (29, 16): {'name': 'SetPickupInside', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 92172, 'type': 29, 'unk4': 1, 'locals': [{'name': 'instanceName', 'offset': 0, 'type': 7}]}
+# (29, 15): {'name': 'SetNibblerInside', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 92280, 'type': 29, 'unk4': 1, 'locals': [{'name': 'instanceName', 'offset': 0, 'type': 7}]}
+# (29, 14): {'name': 'SetDestructable', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 92596, 'type': 29, 'unk4': 129, 'locals': [{'name': 'instanceName', 'offset': 0, 'type': 7}, {'name': 't_destroy', 'offset': 4, 'type': 12}]}
+# (29, 13): {'name': 'SetHint', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 92888, 'type': 29, 'unk4': 129, 'locals': [{'name': 'hint', 'offset': 0, 'type': 7}]}
+# (29, 12): {'name': 'SetAutoOff', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 93248, 'type': 29, 'unk4': 1, 'locals': [{'name': 'dist', 'offset': 0, 'type': 5}]}
+# (29, 11): {'name': 'SetFaceAngle', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 93284, 'type': 29, 'unk4': 1, 'locals': [{'name': 'faceAngle', 'offset': 0, 'type': 5}]}
+# (29, 10): {'name': 'SetInitSeq', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 93320, 'type': 29, 'unk4': 1, 'locals': [{'name': 'seq', 'offset': 0, 'type': 7}]}
+# (29, 9): {'name': 'SetInteractType', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 93368, 'type': 29, 'unk4': 1, 'locals': [{'name': 'interactType', 'offset': 0, 'type': 4}]}
+# (29, 8): {'name': 'SetTrigger', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 93404, 'type': 29, 'unk4': 1, 'locals': [{'name': 'triggerName', 'offset': 0, 'type': 7}]}
+# (29, 7): {'name': 'SetButton', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 93548, 'type': 29, 'unk4': 1, 'locals': [{'name': 'anim', 'offset': 0, 'type': 7}, {'name': 'seqOn', 'offset': 4, 'type': 7}, {'name': 'seqOff', 'offset': 8, 'type': 7}, {'name': 'soundOn', 'offset': 12, 'type': 4}, {'name': 'soundOff', 'offset': 16, 'type': 4}]}
+# (29, 6): {'name': 'Init', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 93692, 'type': 29, 'unk4': 1, 'locals': [{'name': 'nodeName', 'offset': 0, 'type': 7}, {'name': 'animation', 'offset': 4, 'type': 7}, {'name': 'sequence1', 'offset': 8, 'type': 7}, {'name': 'sequence2', 'offset': 12, 'type': 7}, {'name': 'sound1', 'offset': 16, 'type': 4}, {'name': 'sound2', 'offset': 20, 'type': 4}]}
+# (29, 5): {'name': 'Init', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 93856, 'type': 29, 'unk4': 1, 'locals': [{'name': 'nodeName', 'offset': 0, 'type': 7}, {'name': 'animation', 'offset': 4, 'type': 7}, {'name': 'sequence1', 'offset': 8, 'type': 7}, {'name': 'sound', 'offset': 12, 'type': 4}]}
+# (29, 4): {'name': 'Init', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 94076, 'type': 29, 'unk4': 1, 'locals': [{'name': 'nodeName', 'offset': 0, 'type': 7}, {'name': 'animation', 'offset': 4, 'type': 7}, {'name': 'sequence1', 'offset': 8, 'type': 7}, {'name': 'sequence2', 'offset': 12, 'type': 7}]}
+# (29, 3): {'name': 'Init', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 94164, 'type': 29, 'unk4': 1, 'locals': [{'name': 'nodeName', 'offset': 0, 'type': 7}, {'name': 'animation', 'offset': 4, 'type': 7}, {'name': 'sequence1', 'offset': 8, 'type': 7}]}
+# (29, 1): {'name': 'InteractObject', 'path': 'std\\Object\\stdInteractObject.fis', 'address': 94236, 'type': 29, 'unk4': 17, 'locals': []}
+# (28, 2): {'name': '@@Destruct@@', 'path': 'std\\Object\\stdElevator.fis', 'address': 94580, 'type': 28, 'unk4': 33, 'locals': []}
+# (28, 7): {'name': '@@action@@OnElev2ndFloorInside', 'path': 'std\\Object\\stdElevator.fis', 'address': 94640, 'type': 28, 'unk4': 385, 'locals': []}
+# (28, 6): {'name': '@@action@@OnElev1stFloorInside', 'path': 'std\\Object\\stdElevator.fis', 'address': 95456, 'type': 28, 'unk4': 385, 'locals': []}
+# (28, 5): {'name': 'SetDoubleB', 'path': 'std\\Object\\stdElevator.fis', 'address': 96272, 'type': 28, 'unk4': 1, 'locals': [{'name': 'object', 'offset': 0, 'type': 7}, {'name': 'openSeq', 'offset': 4, 'type': 7}, {'name': 'closeSeq', 'offset': 8, 'type': 7}]}
+# (28, 4): {'name': 'SetDoubleA', 'path': 'std\\Object\\stdElevator.fis', 'address': 96336, 'type': 28, 'unk4': 1, 'locals': [{'name': 'object', 'offset': 0, 'type': 7}, {'name': 'openSeq', 'offset': 4, 'type': 7}, {'name': 'closeSeq', 'offset': 8, 'type': 7}]}
+# (28, 3): {'name': 'Init', 'path': 'std\\Object\\stdElevator.fis', 'address': 96400, 'type': 28, 'unk4': 1, 'locals': [{'name': 'door1Trigger', 'offset': 0, 'type': 7}, {'name': 'door1InsideTrigger', 'offset': 4, 'type': 7}, {'name': 'door1Name', 'offset': 8, 'type': 7}, {'name': 'door1OpenAnim', 'offset': 12, 'type': 7}, {'name': 'door1CloseAnim', 'offset': 16, 'type': 7}, {'name': 'door2Trigger', 'offset': 20, 'type': 7}, {'name': 'door2InsideTrigger', 'offset': 24, 'type': 7}, {'name': 'door2Name', 'offset': 28, 'type': 7}, {'name': 'door2OpenAnim', 'offset': 32, 'type': 7}, {'name': 'door2CloseAnim', 'offset': 36, 'type': 7}, {'name': 'staticCameraNode1', 'offset': 40, 'type': 7}, {'name': 'nodeInside1', 'offset': 44, 'type': 7}, {'name': 'staticCameraNode2', 'offset': 48, 'type': 7}, {'name': 'nodeInside2', 'offset': 52, 'type': 7}, {'name': 'doorOpenSound', 'offset': 56, 'type': 4}, {'name': 'doorCloseSound', 'offset': 60, 'type': 4}, {'name': 'travelSound', 'offset': 64, 'type': 4}]}
+# (28, 1): {'name': 'Elevator', 'path': 'std\\Object\\stdElevator.fis', 'address': 96740, 'type': 28, 'unk4': 17, 'locals': []}
+# (27, 52): {'name': '@@action@@aOpen', 'path': 'std\\Object\\stdDoor.fis', 'address': 96860, 'type': 27, 'unk4': 385, 'locals': [{'name': 'b_lock', 'offset': 0, 'type': 4}, {'name': 'dist_player', 'offset': 4, 'type': 5}, {'name': 't_cam_door', 'offset': 8, 'type': 12}, {'name': 'unlock_sound', 'offset': 12, 'type': 4}]}
+# (27, 51): {'name': 'PlaySound', 'path': 'std\\Object\\stdDoor.fis', 'address': 99616, 'type': 27, 'unk4': 1, 'locals': [{'name': 'soundId', 'offset': 0, 'type': 4}, {'name': 'radius', 'offset': 4, 'type': 5}, {'name': 'bLoop', 'offset': 8, 'type': 4}]}
+# (27, 50): {'name': 'PlaySound', 'path': 'std\\Object\\stdDoor.fis', 'address': 99856, 'type': 27, 'unk4': 1, 'locals': [{'name': 'soundId', 'offset': 0, 'type': 4}, {'name': 'bLoop', 'offset': 4, 'type': 4}]}
+# (27, 49): {'name': 'RunLocked', 'path': 'std\\Object\\stdDoor.fis', 'address': 99928, 'type': 27, 'unk4': 129, 'locals': [{'name': 't_unlock', 'offset': 0, 'type': 12}]}
+# (27, 48): {'name': 'PostClose', 'path': 'std\\Object\\stdDoor.fis', 'address': 102004, 'type': 27, 'unk4': 129, 'locals': [{'name': 'soundClose', 'offset': 0, 'type': 4}, {'name': 'bLoopSound', 'offset': 4, 'type': 4}, {'name': 'sound', 'offset': 8, 'type': 4}]}
+# (27, 47): {'name': 'PostOpen', 'path': 'std\\Object\\stdDoor.fis', 'address': 102900, 'type': 27, 'unk4': 129, 'locals': [{'name': 'soundOpen', 'offset': 0, 'type': 4}]}
+# (27, 46): {'name': 'PlayLockedSpeech', 'path': 'std\\Object\\stdDoor.fis', 'address': 103280, 'type': 27, 'unk4': 129, 'locals': [{'name': 'r', 'offset': 0, 'type': 5}, {'name': 'line', 'offset': 4, 'type': 7}]}
+# (27, 45): {'name': 'RunNpcAccess', 'path': 'std\\Object\\stdDoor.fis', 'address': 103884, 'type': 27, 'unk4': 129, 'locals': []}
+# (27, 44): {'name': 'QuickUnlock', 'path': 'std\\Object\\stdDoor.fis', 'address': 104452, 'type': 27, 'unk4': 1, 'locals': []}
+# (27, 43): {'name': 'TheUnlock', 'path': 'std\\Object\\stdDoor.fis', 'address': 104588, 'type': 27, 'unk4': 129, 'locals': [{'name': 'sound', 'offset': 0, 'type': 4}]}
+# (27, 42): {'name': 'Unlock', 'path': 'std\\Object\\stdDoor.fis', 'address': 105172, 'type': 27, 'unk4': 1, 'locals': [{'name': 'bSkippable', 'offset': 0, 'type': 4}]}
+# (27, 41): {'name': 'Unlock', 'path': 'std\\Object\\stdDoor.fis', 'address': 105396, 'type': 27, 'unk4': 1, 'locals': []}
+# (27, 40): {'name': 'QuickLock', 'path': 'std\\Object\\stdDoor.fis', 'address': 105444, 'type': 27, 'unk4': 1, 'locals': []}
+# (27, 39): {'name': 'SyncLock', 'path': 'std\\Object\\stdDoor.fis', 'address': 106064, 'type': 27, 'unk4': 1, 'locals': [{'name': 'bSkippable', 'offset': 0, 'type': 4}]}
+# (27, 38): {'name': 'SyncLock', 'path': 'std\\Object\\stdDoor.fis', 'address': 106340, 'type': 27, 'unk4': 1, 'locals': []}
+# (27, 37): {'name': 'Lock', 'path': 'std\\Object\\stdDoor.fis', 'address': 106388, 'type': 27, 'unk4': 129, 'locals': []}
+# (27, 36): {'name': 'QuickClose', 'path': 'std\\Object\\stdDoor.fis', 'address': 106896, 'type': 27, 'unk4': 1, 'locals': []}
+# (27, 35): {'name': 'SyncClose', 'path': 'std\\Object\\stdDoor.fis', 'address': 107140, 'type': 27, 'unk4': 1, 'locals': [{'name': 'bSkippable', 'offset': 0, 'type': 4}]}
+# (27, 34): {'name': 'SyncClose', 'path': 'std\\Object\\stdDoor.fis', 'address': 107484, 'type': 27, 'unk4': 1, 'locals': []}
+# (27, 33): {'name': 'Close', 'path': 'std\\Object\\stdDoor.fis', 'address': 107532, 'type': 27, 'unk4': 1, 'locals': [{'name': 'anim_length', 'offset': 0, 'type': 5}, {'name': 'sound_close', 'offset': 4, 'type': 4}]}
+# (27, 32): {'name': 'QuickOpen', 'path': 'std\\Object\\stdDoor.fis', 'address': 108320, 'type': 27, 'unk4': 1, 'locals': []}
+# (27, 31): {'name': 'SyncOpenPercentage', 'path': 'std\\Object\\stdDoor.fis', 'address': 108532, 'type': 27, 'unk4': 1, 'locals': [{'name': 'percentage', 'offset': 0, 'type': 5}, {'name': 'bSkippable', 'offset': 4, 'type': 4}]}
+# (27, 30): {'name': 'SyncOpenPercentage', 'path': 'std\\Object\\stdDoor.fis', 'address': 109036, 'type': 27, 'unk4': 1, 'locals': [{'name': 'percentage', 'offset': 0, 'type': 5}]}
+# (27, 29): {'name': 'SyncOpen', 'path': 'std\\Object\\stdDoor.fis', 'address': 109092, 'type': 27, 'unk4': 1, 'locals': []}
+# (27, 28): {'name': 'SyncOpen', 'path': 'std\\Object\\stdDoor.fis', 'address': 109140, 'type': 27, 'unk4': 1, 'locals': [{'name': 'bSkippable', 'offset': 0, 'type': 4}]}
+# (27, 27): {'name': 'Open', 'path': 'std\\Object\\stdDoor.fis', 'address': 109484, 'type': 27, 'unk4': 1, 'locals': [{'name': 'anim_length', 'offset': 0, 'type': 5}, {'name': 'sound_open', 'offset': 4, 'type': 4}]}
+# (27, 26): {'name': 'DisableNpcAccess', 'path': 'std\\Object\\stdDoor.fis', 'address': 110520, 'type': 27, 'unk4': 1, 'locals': []}
+# (27, 25): {'name': 'EnableNpcAccess', 'path': 'std\\Object\\stdDoor.fis', 'address': 110556, 'type': 27, 'unk4': 1, 'locals': []}
+# (27, 24): {'name': 'SetShake', 'path': 'std\\Object\\stdDoor.fis', 'address': 110640, 'type': 27, 'unk4': 1, 'locals': [{'name': 'amp', 'offset': 0, 'type': 5}]}
+# (27, 23): {'name': 'SetShutShake', 'path': 'std\\Object\\stdDoor.fis', 'address': 110676, 'type': 27, 'unk4': 1, 'locals': [{'name': 'amp', 'offset': 0, 'type': 5}]}
+# (27, 22): {'name': 'EnableLameLockedSpeech', 'path': 'std\\Object\\stdDoor.fis', 'address': 110712, 'type': 27, 'unk4': 1, 'locals': []}
+# (27, 21): {'name': 'DisableKeycard', 'path': 'std\\Object\\stdDoor.fis', 'address': 110748, 'type': 27, 'unk4': 1, 'locals': []}
+# (27, 20): {'name': 'EnableKeycard', 'path': 'std\\Object\\stdDoor.fis', 'address': 110784, 'type': 27, 'unk4': 1, 'locals': []}
+# (27, 19): {'name': 'SetKeycard', 'path': 'std\\Object\\stdDoor.fis', 'address': 110820, 'type': 27, 'unk4': 1, 'locals': [{'name': 'pickupName', 'offset': 0, 'type': 7}, {'name': 'boxNode', 'offset': 4, 'type': 7}, {'name': 'object', 'offset': 8, 'type': 7}, {'name': 'seqOn', 'offset': 12, 'type': 7}, {'name': 'seqOff', 'offset': 16, 'type': 7}]}
+# (27, 18): {'name': 'SetKeycard', 'path': 'std\\Object\\stdDoor.fis', 'address': 111044, 'type': 27, 'unk4': 1, 'locals': [{'name': 'pickupName', 'offset': 0, 'type': 7}]}
+# (27, 17): {'name': 'SetSoundRadius', 'path': 'std\\Object\\stdDoor.fis', 'address': 111096, 'type': 27, 'unk4': 1, 'locals': [{'name': 'radius', 'offset': 0, 'type': 5}]}
+# (27, 16): {'name': 'SetSoundLoop', 'path': 'std\\Object\\stdDoor.fis', 'address': 111132, 'type': 27, 'unk4': 1, 'locals': [{'name': 'bLoopOpen', 'offset': 0, 'type': 4}, {'name': 'bLoopClose', 'offset': 4, 'type': 4}]}
+# (27, 15): {'name': 'SetLockedSounds', 'path': 'std\\Object\\stdDoor.fis', 'address': 111184, 'type': 27, 'unk4': 1, 'locals': [{'name': 'locked', 'offset': 0, 'type': 4}, {'name': 'unlock', 'offset': 4, 'type': 4}]}
+# (27, 14): {'name': 'SetUnlockSound', 'path': 'std\\Object\\stdDoor.fis', 'address': 111236, 'type': 27, 'unk4': 1, 'locals': [{'name': 'soundID', 'offset': 0, 'type': 4}]}
+# (27, 13): {'name': 'SetLockedSound', 'path': 'std\\Object\\stdDoor.fis', 'address': 111272, 'type': 27, 'unk4': 1, 'locals': [{'name': 'soundID', 'offset': 0, 'type': 4}]}
+# (27, 12): {'name': 'SetOpenSound', 'path': 'std\\Object\\stdDoor.fis', 'address': 111308, 'type': 27, 'unk4': 1, 'locals': [{'name': 'soundID', 'offset': 0, 'type': 4}]}
+# (27, 11): {'name': 'SetCloseSound', 'path': 'std\\Object\\stdDoor.fis', 'address': 111344, 'type': 27, 'unk4': 1, 'locals': [{'name': 'soundID', 'offset': 0, 'type': 4}]}
+# (27, 10): {'name': 'SetPortal', 'path': 'std\\Object\\stdDoor.fis', 'address': 111380, 'type': 27, 'unk4': 1, 'locals': [{'name': 'portalName', 'offset': 0, 'type': 7}]}
+# (27, 9): {'name': 'SetDouble', 'path': 'std\\Object\\stdDoor.fis', 'address': 111556, 'type': 27, 'unk4': 1, 'locals': [{'name': 'object', 'offset': 0, 'type': 7}, {'name': 'openSeq', 'offset': 4, 'type': 7}, {'name': 'closeSeq', 'offset': 8, 'type': 7}]}
+# (27, 8): {'name': 'SetAutoLock', 'path': 'std\\Object\\stdDoor.fis', 'address': 111640, 'type': 27, 'unk4': 1, 'locals': [{'name': 'trigger', 'offset': 0, 'type': 7}, {'name': 'bLock', 'offset': 4, 'type': 4}]}
+# (27, 7): {'name': 'SetAutoLock', 'path': 'std\\Object\\stdDoor.fis', 'address': 111736, 'type': 27, 'unk4': 1, 'locals': [{'name': 'trigger', 'offset': 0, 'type': 7}]}
+# (27, 6): {'name': 'Toggle', 'path': 'std\\Object\\stdDoor.fis', 'address': 111832, 'type': 27, 'unk4': 1, 'locals': [{'name': 'enabled', 'offset': 0, 'type': 4}]}
+# (27, 5): {'name': 'Init', 'path': 'std\\Object\\stdDoor.fis', 'address': 111868, 'type': 27, 'unk4': 1, 'locals': [{'name': 'triggerName', 'offset': 0, 'type': 7}, {'name': 'objectName', 'offset': 4, 'type': 7}, {'name': 'openAnimation', 'offset': 8, 'type': 7}, {'name': 'closeAnimation', 'offset': 12, 'type': 7}, {'name': 'openSoundID', 'offset': 16, 'type': 4}, {'name': 'closeSoundID', 'offset': 20, 'type': 4}, {'name': 'sRoomTrigName', 'offset': 24, 'type': 7}]}
+# (27, 4): {'name': 'Init', 'path': 'std\\Object\\stdDoor.fis', 'address': 112044, 'type': 27, 'unk4': 1, 'locals': [{'name': 'triggerName', 'offset': 0, 'type': 7}, {'name': 'objectName', 'offset': 4, 'type': 7}, {'name': 'openAnimation', 'offset': 8, 'type': 7}, {'name': 'closeAnimation', 'offset': 12, 'type': 7}, {'name': 'openSoundID', 'offset': 16, 'type': 4}, {'name': 'closeSoundID', 'offset': 20, 'type': 4}]}
+# (27, 3): {'name': 'Init', 'path': 'std\\Object\\stdDoor.fis', 'address': 112336, 'type': 27, 'unk4': 1, 'locals': [{'name': 'triggerName', 'offset': 0, 'type': 7}, {'name': 'objectName', 'offset': 4, 'type': 7}, {'name': 'openAnimation', 'offset': 8, 'type': 7}, {'name': 'closeAnimation', 'offset': 12, 'type': 7}]}
+# (26, 2): {'name': '@@Destruct@@', 'path': 'std\\Object\\stdPickup.fis', 'address': 112968, 'type': 26, 'unk4': 33, 'locals': []}
+# (26, 6): {'name': '@@action@@OnPickup', 'path': 'std\\Object\\stdPickup.fis', 'address': 112988, 'type': 26, 'unk4': 385, 'locals': []}
+# (26, 5): {'name': 'Disable', 'path': 'std\\Object\\stdPickup.fis', 'address': 113168, 'type': 26, 'unk4': 1, 'locals': []}
+# (26, 4): {'name': 'Enable', 'path': 'std\\Object\\stdPickup.fis', 'address': 113216, 'type': 26, 'unk4': 1, 'locals': []}
+# (26, 3): {'name': 'Init', 'path': 'std\\Object\\stdPickup.fis', 'address': 113264, 'type': 26, 'unk4': 1, 'locals': [{'name': '_name', 'offset': 0, 'type': 7}, {'name': '_sndOnPickup', 'offset': 4, 'type': 4}]}
+# (26, 1): {'name': 'Pickup', 'path': 'std\\Object\\stdPickup.fis', 'address': 113344, 'type': 26, 'unk4': 17, 'locals': []}
+# (25, 1): {'name': 'InitSteam', 'path': 'std\\System\\stdSteam.fis', 'address': 113432, 'type': 25, 'unk4': 17, 'locals': []}
+# (24, 1): {'name': 'InitHints', 'path': 'std\\System\\stdHints.fis', 'address': 114640, 'type': 24, 'unk4': 17, 'locals': []}
+# (23, 1): {'name': 'InitCharacter', 'path': 'std\\System\\stdCharacter.fis', 'address': 114692, 'type': 23, 'unk4': 17, 'locals': []}
+# (22, 1): {'name': 'InitMisc', 'path': 'std\\System\\stdMisc.fis', 'address': 114808, 'type': 22, 'unk4': 17, 'locals': []}
+# (21, 1): {'name': 'InitSound', 'path': 'std\\System\\stdSound.fis', 'address': 115096, 'type': 21, 'unk4': 17, 'locals': []}
+# (20, 1): {'name': 'InitMath', 'path': 'std\\System\\stdMath.fis', 'address': 115180, 'type': 20, 'unk4': 17, 'locals': []}
+# (19, 4): {'name': 'SetOutdoors', 'path': 'std\\System\\stdLightManager.fis', 'address': 115216, 'type': 19, 'unk4': 1, 'locals': []}
+# (19, 3): {'name': 'SetIndoors', 'path': 'std\\System\\stdLightManager.fis', 'address': 115272, 'type': 19, 'unk4': 1, 'locals': []}
+# (19, 1): {'name': 'LightManager', 'path': 'std\\System\\stdLightManager.fis', 'address': 115328, 'type': 19, 'unk4': 17, 'locals': []}
+# (18, 2): {'name': '@@Destruct@@', 'path': 'std\\Object\\stdRespawn.fis', 'address': 117228, 'type': 18, 'unk4': 33, 'locals': []}
+# (18, 14): {'name': 'SetCurrent', 'path': 'std\\Object\\stdRespawn.fis', 'address': 117248, 'type': 18, 'unk4': 129, 'locals': [{'name': 'strWayPoint', 'offset': 0, 'type': 7}, {'name': 'bUpdateStreaming', 'offset': 4, 'type': 4}, {'name': 'strCamNode', 'offset': 8, 'type': 7}, {'name': 'bCam', 'offset': 12, 'type': 4}, {'name': 'bDisableControl', 'offset': 16, 'type': 4}, {'name': 'bRespawnEffects', 'offset': 20, 'type': 4}, {'name': 'lMyID', 'offset': 24, 'type': 4}]}
+# (18, 13): {'name': 'SetCurrent', 'path': 'std\\Object\\stdRespawn.fis', 'address': 118812, 'type': 18, 'unk4': 1, 'locals': [{'name': 'strWayPoint', 'offset': 0, 'type': 7}, {'name': 'bUpdateStreaming', 'offset': 4, 'type': 4}, {'name': 'strCamNode', 'offset': 8, 'type': 7}, {'name': 'bCam', 'offset': 12, 'type': 4}, {'name': 'bDisableControl', 'offset': 16, 'type': 4}]}
+# (18, 12): {'name': 'SetCurrent', 'path': 'std\\Object\\stdRespawn.fis', 'address': 118904, 'type': 18, 'unk4': 1, 'locals': [{'name': 'strWayPoint', 'offset': 0, 'type': 7}, {'name': 'bUpdateStreaming', 'offset': 4, 'type': 4}, {'name': 'strCamNode', 'offset': 8, 'type': 7}, {'name': 'bCam', 'offset': 12, 'type': 4}]}
+# (18, 11): {'name': 'SetCurrent', 'path': 'std\\Object\\stdRespawn.fis', 'address': 118996, 'type': 18, 'unk4': 1, 'locals': [{'name': 'strWayPoint', 'offset': 0, 'type': 7}, {'name': 'bUpdateStreaming', 'offset': 4, 'type': 4}, {'name': 'bDisableControl', 'offset': 8, 'type': 4}]}
+# (18, 10): {'name': 'SetCurrent', 'path': 'std\\Object\\stdRespawn.fis', 'address': 119092, 'type': 18, 'unk4': 1, 'locals': [{'name': 'strWayPoint', 'offset': 0, 'type': 7}, {'name': 'bUpdateStreaming', 'offset': 4, 'type': 4}]}
+# (18, 9): {'name': 'SetCurrent', 'path': 'std\\Object\\stdRespawn.fis', 'address': 119188, 'type': 18, 'unk4': 1, 'locals': [{'name': 'strWayPoint', 'offset': 0, 'type': 7}]}
+# (18, 8): {'name': 'Add', 'path': 'std\\Object\\stdRespawn.fis', 'address': 119284, 'type': 18, 'unk4': 129, 'locals': [{'name': 'strWayPoint', 'offset': 0, 'type': 7}, {'name': 'strBoxTrigger', 'offset': 4, 'type': 7}, {'name': 'bUpdateStreaming', 'offset': 8, 'type': 4}, {'name': 'strCamNode', 'offset': 12, 'type': 7}, {'name': 'bCam', 'offset': 16, 'type': 4}, {'name': 'bDisableControl', 'offset': 20, 'type': 4}, {'name': 'bRespawnEffects', 'offset': 24, 'type': 4}, {'name': 'tEnter', 'offset': 28, 'type': 12}]}
+# (18, 7): {'name': 'Add', 'path': 'std\\Object\\stdRespawn.fis', 'address': 119652, 'type': 18, 'unk4': 1, 'locals': [{'name': 'strWayPoint', 'offset': 0, 'type': 7}, {'name': 'strBoxTrigger', 'offset': 4, 'type': 7}, {'name': 'bUpdateStreaming', 'offset': 8, 'type': 4}, {'name': 'strCamNode', 'offset': 12, 'type': 7}, {'name': 'bCam', 'offset': 16, 'type': 4}, {'name': 'bDisableControl', 'offset': 20, 'type': 4}]}
+# (18, 6): {'name': 'Add', 'path': 'std\\Object\\stdRespawn.fis', 'address': 119752, 'type': 18, 'unk4': 1, 'locals': [{'name': 'strWayPoint', 'offset': 0, 'type': 7}, {'name': 'strBoxTrigger', 'offset': 4, 'type': 7}, {'name': 'bUpdateStreaming', 'offset': 8, 'type': 4}, {'name': 'strCamNode', 'offset': 12, 'type': 7}, {'name': 'bCam', 'offset': 16, 'type': 4}]}
+# (18, 5): {'name': 'Add', 'path': 'std\\Object\\stdRespawn.fis', 'address': 119852, 'type': 18, 'unk4': 1, 'locals': [{'name': 'strWayPoint', 'offset': 0, 'type': 7}, {'name': 'strBoxTrigger', 'offset': 4, 'type': 7}, {'name': 'bUpdateStreaming', 'offset': 8, 'type': 4}, {'name': 'bDisableControl', 'offset': 12, 'type': 4}]}
+# (18, 4): {'name': 'Add', 'path': 'std\\Object\\stdRespawn.fis', 'address': 119956, 'type': 18, 'unk4': 1, 'locals': [{'name': 'strWayPoint', 'offset': 0, 'type': 7}, {'name': 'strBoxTrigger', 'offset': 4, 'type': 7}, {'name': 'bUpdateStreaming', 'offset': 8, 'type': 4}]}
+# (18, 3): {'name': 'Add', 'path': 'std\\Object\\stdRespawn.fis', 'address': 120060, 'type': 18, 'unk4': 1, 'locals': [{'name': 'strWayPoint', 'offset': 0, 'type': 7}, {'name': 'strBoxTrigger', 'offset': 4, 'type': 7}]}
+# (18, 1): {'name': 'Init', 'path': 'std\\Object\\stdRespawn.fis', 'address': 120164, 'type': 18, 'unk4': 17, 'locals': []}
+# (16, 8): {'name': 'GetDensity', 'path': '', 'address': 0, 'type': 16, 'unk4': 2, 'locals': []}
+# (16, 7): {'name': 'SetDensity', 'path': '', 'address': 0, 'type': 16, 'unk4': 2, 'locals': [{'name': '_lDensity', 'offset': 0, 'type': 4}]}
+# (16, 6): {'name': 'GetHeight', 'path': '', 'address': 0, 'type': 16, 'unk4': 2, 'locals': []}
+# (16, 5): {'name': 'SetHeight', 'path': '', 'address': 0, 'type': 16, 'unk4': 2, 'locals': [{'name': '_fHeight', 'offset': 0, 'type': 5}]}
+# (16, 4): {'name': 'GetRadius', 'path': '', 'address': 0, 'type': 16, 'unk4': 2, 'locals': []}
+# (16, 3): {'name': 'SetRadius', 'path': '', 'address': 0, 'type': 16, 'unk4': 2, 'locals': [{'name': '_fRadius', 'offset': 0, 'type': 5}]}
+# (15, 29): {'name': 'SetInfinite', 'path': '', 'address': 0, 'type': 15, 'unk4': 2, 'locals': [{'name': '_bInfinite', 'offset': 0, 'type': 6}]}
+# (15, 28): {'name': 'SetContinuous', 'path': '', 'address': 0, 'type': 15, 'unk4': 2, 'locals': [{'name': '_bContinuous', 'offset': 0, 'type': 6}]}
+# (15, 27): {'name': 'SetGravity', 'path': '', 'address': 0, 'type': 15, 'unk4': 2, 'locals': [{'name': '_fGravity', 'offset': 0, 'type': 5}]}
+# (15, 26): {'name': 'SetFriction', 'path': '', 'address': 0, 'type': 15, 'unk4': 2, 'locals': [{'name': '_fFriction', 'offset': 0, 'type': 5}]}
+# (15, 25): {'name': 'SetAmount', 'path': '', 'address': 0, 'type': 15, 'unk4': 2, 'locals': [{'name': '_nParticles', 'offset': 0, 'type': 4}]}
+# (15, 24): {'name': 'SetEmitTime', 'path': '', 'address': 0, 'type': 15, 'unk4': 2, 'locals': [{'name': '_fEmit1', 'offset': 0, 'type': 5}, {'name': '_fEmit2', 'offset': 4, 'type': 5}]}
+# (15, 23): {'name': 'SetEmitTime', 'path': '', 'address': 0, 'type': 15, 'unk4': 2, 'locals': [{'name': '_fEmit', 'offset': 0, 'type': 5}]}
+# (15, 22): {'name': 'SetSpread', 'path': '', 'address': 0, 'type': 15, 'unk4': 2, 'locals': [{'name': '_fSpread1', 'offset': 0, 'type': 5}, {'name': '_fSpread2', 'offset': 4, 'type': 5}]}
+# (15, 21): {'name': 'SetSpread', 'path': '', 'address': 0, 'type': 15, 'unk4': 2, 'locals': [{'name': '_fSpread', 'offset': 0, 'type': 5}]}
+# (15, 20): {'name': 'SetLifeTime', 'path': '', 'address': 0, 'type': 15, 'unk4': 2, 'locals': [{'name': '_fTime1', 'offset': 0, 'type': 5}, {'name': '_fTime2', 'offset': 4, 'type': 5}]}
+# (15, 19): {'name': 'SetLifeTime', 'path': '', 'address': 0, 'type': 15, 'unk4': 2, 'locals': [{'name': '_fTime', 'offset': 0, 'type': 5}]}
+# (15, 18): {'name': 'SetVel', 'path': '', 'address': 0, 'type': 15, 'unk4': 2, 'locals': [{'name': '_fVel1', 'offset': 0, 'type': 5}, {'name': '_fVel2', 'offset': 4, 'type': 5}]}
+# (15, 17): {'name': 'SetVel', 'path': '', 'address': 0, 'type': 15, 'unk4': 2, 'locals': [{'name': '_fVel', 'offset': 0, 'type': 5}]}
+# (15, 16): {'name': 'PresetInfinite', 'path': '', 'address': 0, 'type': 15, 'unk4': 2, 'locals': [{'name': '_bInfinite', 'offset': 0, 'type': 6}]}
+# (15, 15): {'name': 'PresetContinuous', 'path': '', 'address': 0, 'type': 15, 'unk4': 2, 'locals': [{'name': '_bContinuous', 'offset': 0, 'type': 6}]}
+# (15, 14): {'name': 'PresetGravity', 'path': '', 'address': 0, 'type': 15, 'unk4': 2, 'locals': [{'name': '_fGravity', 'offset': 0, 'type': 5}]}
+# (15, 13): {'name': 'PresetFriction', 'path': '', 'address': 0, 'type': 15, 'unk4': 2, 'locals': [{'name': '_fFriction', 'offset': 0, 'type': 5}]}
+# (15, 12): {'name': 'PresetAmount', 'path': '', 'address': 0, 'type': 15, 'unk4': 2, 'locals': [{'name': '_nParticles', 'offset': 0, 'type': 4}]}
+# (15, 11): {'name': 'PresetEmitTime', 'path': '', 'address': 0, 'type': 15, 'unk4': 2, 'locals': [{'name': '_fEmit1', 'offset': 0, 'type': 5}, {'name': '_fEmit2', 'offset': 4, 'type': 5}]}
+# (15, 10): {'name': 'PresetEmitTime', 'path': '', 'address': 0, 'type': 15, 'unk4': 2, 'locals': [{'name': '_fEmit', 'offset': 0, 'type': 5}]}
+# (15, 9): {'name': 'PresetSpread', 'path': '', 'address': 0, 'type': 15, 'unk4': 2, 'locals': [{'name': '_fSpread1', 'offset': 0, 'type': 5}, {'name': '_fSpread2', 'offset': 4, 'type': 5}]}
+# (15, 8): {'name': 'PresetSpread', 'path': '', 'address': 0, 'type': 15, 'unk4': 2, 'locals': [{'name': '_fSpread', 'offset': 0, 'type': 5}]}
+# (15, 7): {'name': 'PresetLifeTime', 'path': '', 'address': 0, 'type': 15, 'unk4': 2, 'locals': [{'name': '_fTime1', 'offset': 0, 'type': 5}, {'name': '_fTime2', 'offset': 4, 'type': 5}]}
+# (15, 6): {'name': 'PresetLifeTime', 'path': '', 'address': 0, 'type': 15, 'unk4': 2, 'locals': [{'name': '_fTime', 'offset': 0, 'type': 5}]}
+# (15, 5): {'name': 'PresetVel', 'path': '', 'address': 0, 'type': 15, 'unk4': 2, 'locals': [{'name': '_fVel1', 'offset': 0, 'type': 5}, {'name': '_fVel2', 'offset': 4, 'type': 5}]}
+# (15, 4): {'name': 'PresetVel', 'path': '', 'address': 0, 'type': 15, 'unk4': 2, 'locals': [{'name': '_fVel', 'offset': 0, 'type': 5}]}
+# (15, 3): {'name': 'SetFlashTexture', 'path': '', 'address': 0, 'type': 15, 'unk4': 2, 'locals': [{'name': '_szTexture', 'offset': 0, 'type': 7}]}
+# (14, 50): {'name': 'SetTwinkle', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_bTwinkle', 'offset': 0, 'type': 6}]}
+# (14, 49): {'name': 'SetColor', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fRed1', 'offset': 0, 'type': 5}, {'name': '_fGreen1', 'offset': 4, 'type': 5}, {'name': '_fBlue1', 'offset': 8, 'type': 5}, {'name': '_fRed2', 'offset': 12, 'type': 5}, {'name': '_fGreen2', 'offset': 16, 'type': 5}, {'name': '_fBlue2', 'offset': 20, 'type': 5}]}
+# (14, 48): {'name': 'SetColor', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fRed', 'offset': 0, 'type': 5}, {'name': '_fGreen', 'offset': 4, 'type': 5}, {'name': '_fBlue', 'offset': 8, 'type': 5}]}
+# (14, 47): {'name': 'SetFade', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fFade1', 'offset': 0, 'type': 5}, {'name': '_fFade2', 'offset': 4, 'type': 5}]}
+# (14, 46): {'name': 'SetFade', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fFade', 'offset': 0, 'type': 5}]}
+# (14, 45): {'name': 'SetSize', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fSize1', 'offset': 0, 'type': 5}, {'name': '_fSize2', 'offset': 4, 'type': 5}]}
+# (14, 44): {'name': 'SetSize', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fSize', 'offset': 0, 'type': 5}]}
+# (14, 43): {'name': 'SetAdditive', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': 'bAdditive', 'offset': 0, 'type': 6}]}
+# (14, 42): {'name': 'SetDamageDist', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fDamageDist', 'offset': 0, 'type': 5}]}
+# (14, 41): {'name': 'SetDamage', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fDamage', 'offset': 0, 'type': 5}]}
+# (14, 40): {'name': 'SetInfinite', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_bInfinite', 'offset': 0, 'type': 6}]}
+# (14, 39): {'name': 'SetContinuous', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_bContinuous', 'offset': 0, 'type': 6}]}
+# (14, 38): {'name': 'SetGravity', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fGravity', 'offset': 0, 'type': 5}]}
+# (14, 37): {'name': 'SetFriction', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fFriction', 'offset': 0, 'type': 5}]}
+# (14, 36): {'name': 'SetAmount', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_nParticles', 'offset': 0, 'type': 4}]}
+# (14, 35): {'name': 'SetEmitTime', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fEmit1', 'offset': 0, 'type': 5}, {'name': '_fEmit2', 'offset': 4, 'type': 5}]}
+# (14, 34): {'name': 'SetEmitTime', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fEmit', 'offset': 0, 'type': 5}]}
+# (14, 33): {'name': 'SetSpread', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fSpread1', 'offset': 0, 'type': 5}, {'name': '_fSpread2', 'offset': 4, 'type': 5}]}
+# (14, 32): {'name': 'SetSpread', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fSpread', 'offset': 0, 'type': 5}]}
+# (14, 31): {'name': 'SetLifeTime', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fTime1', 'offset': 0, 'type': 5}, {'name': '_fTime2', 'offset': 4, 'type': 5}]}
+# (14, 30): {'name': 'SetLifeTime', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fTime', 'offset': 0, 'type': 5}]}
+# (14, 29): {'name': 'SetVel', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fVel1', 'offset': 0, 'type': 5}, {'name': '_fVel2', 'offset': 4, 'type': 5}]}
+# (14, 28): {'name': 'SetVel', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fVel', 'offset': 0, 'type': 5}]}
+# (14, 27): {'name': 'PresetTwinkle', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_bTwinkle', 'offset': 0, 'type': 6}]}
+# (14, 26): {'name': 'PresetColor', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fRed1', 'offset': 0, 'type': 5}, {'name': '_fGreen1', 'offset': 4, 'type': 5}, {'name': '_fBlue1', 'offset': 8, 'type': 5}, {'name': '_fRed2', 'offset': 12, 'type': 5}, {'name': '_fGreen2', 'offset': 16, 'type': 5}, {'name': '_fBlue2', 'offset': 20, 'type': 5}]}
+# (14, 25): {'name': 'PresetColor', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fRed', 'offset': 0, 'type': 5}, {'name': '_fGreen', 'offset': 4, 'type': 5}, {'name': '_fBlue', 'offset': 8, 'type': 5}]}
+# (14, 24): {'name': 'PresetFade', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fFade1', 'offset': 0, 'type': 5}, {'name': '_fFade2', 'offset': 4, 'type': 5}]}
+# (14, 23): {'name': 'PresetFade', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fFade1', 'offset': 0, 'type': 5}]}
+# (14, 22): {'name': 'PresetSize', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fSize1', 'offset': 0, 'type': 5}, {'name': '_fSize2', 'offset': 4, 'type': 5}]}
+# (14, 21): {'name': 'PresetSize', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fSize', 'offset': 0, 'type': 5}]}
+# (14, 20): {'name': 'PresetAdditive', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': 'bAdditive', 'offset': 0, 'type': 6}]}
+# (14, 19): {'name': 'PresetDamageDist', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fDamageDist', 'offset': 0, 'type': 5}]}
+# (14, 18): {'name': 'PresetDamage', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fDamage', 'offset': 0, 'type': 5}]}
+# (14, 17): {'name': 'PresetInfinite', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_bInfinite', 'offset': 0, 'type': 6}]}
+# (14, 16): {'name': 'PresetContinuous', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_bContinuous', 'offset': 0, 'type': 6}]}
+# (14, 15): {'name': 'PresetGravity', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fGravity', 'offset': 0, 'type': 5}]}
+# (14, 14): {'name': 'PresetFriction', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fFriction', 'offset': 0, 'type': 5}]}
+# (14, 13): {'name': 'PresetAmount', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_nParticles', 'offset': 0, 'type': 4}]}
+# (14, 12): {'name': 'PresetEmitTime', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fEmit1', 'offset': 0, 'type': 5}, {'name': '_fEmit2', 'offset': 4, 'type': 5}]}
+# (14, 11): {'name': 'PresetEmitTime', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fEmit', 'offset': 0, 'type': 5}]}
+# (14, 10): {'name': 'PresetSpread', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fSpread1', 'offset': 0, 'type': 5}, {'name': '_fSpread2', 'offset': 4, 'type': 5}]}
+# (14, 9): {'name': 'PresetSpread', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fSpread', 'offset': 0, 'type': 5}]}
+# (14, 8): {'name': 'PresetLifeTime', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fTime1', 'offset': 0, 'type': 5}, {'name': '_fTime2', 'offset': 4, 'type': 5}]}
+# (14, 7): {'name': 'PresetLifeTime', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fTime', 'offset': 0, 'type': 5}]}
+# (14, 6): {'name': 'PresetVel', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fVel1', 'offset': 0, 'type': 5}, {'name': '_fVel2', 'offset': 4, 'type': 5}]}
+# (14, 5): {'name': 'PresetVel', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_fVel', 'offset': 0, 'type': 5}]}
+# (14, 4): {'name': 'SetTexture', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_szTexture', 'offset': 0, 'type': 7}]}
+# (14, 3): {'name': 'SetFlashTexture', 'path': '', 'address': 0, 'type': 14, 'unk4': 2, 'locals': [{'name': '_szTexture', 'offset': 0, 'type': 7}]}
+# (13, 1): {'name': 'Init', 'path': '..\\Futurama\\Script\\FuNative.fis', 'address': 120348, 'type': 13, 'unk4': 17, 'locals': []}
+# (11, 8): {'name': 'GetActiveAmmo', 'path': '', 'address': 0, 'type': 11, 'unk4': 2, 'locals': []}
+# (11, 7): {'name': 'SetActiveAmmo', 'path': '', 'address': 0, 'type': 11, 'unk4': 2, 'locals': []}
+# (11, 6): {'name': 'GetAmmo', 'path': '', 'address': 0, 'type': 11, 'unk4': 2, 'locals': []}
+# (11, 5): {'name': 'SetAmmo', 'path': '', 'address': 0, 'type': 11, 'unk4': 2, 'locals': []}
+# (11, 4): {'name': 'Deactivate', 'path': '', 'address': 0, 'type': 11, 'unk4': 2, 'locals': []}
+# (11, 3): {'name': 'Activate', 'path': '', 'address': 0, 'type': 11, 'unk4': 2, 'locals': []}
+# (10, 5): {'name': 'ClearDamageFlag', 'path': '', 'address': 0, 'type': 10, 'unk4': 2, 'locals': []}
+# (10, 4): {'name': 'HasTakenDamage', 'path': '', 'address': 0, 'type': 10, 'unk4': 2, 'locals': []}
+# (10, 3): {'name': 'FireWeapon', 'path': '', 'address': 0, 'type': 10, 'unk4': 2, 'locals': []}
+# (9, 3): {'name': 'Set', 'path': '..\\Futurama\\Script\\FuNative.fis', 'address': 120408, 'type': 9, 'unk4': 17, 'locals': [{'name': 'set_r', 'offset': 0, 'type': 5}, {'name': 'set_g', 'offset': 4, 'type': 5}, {'name': 'set_b', 'offset': 8, 'type': 5}]}
+# (9, 1): {'name': 'Default', 'path': '..\\Futurama\\Script\\FuNative.fis', 'address': 120476, 'type': 9, 'unk4': 17, 'locals': []}
+# (8, 1): {'name': 'Default', 'path': '..\\Futurama\\Script\\FuNative.fis', 'address': 120544, 'type': 8, 'unk4': 17, 'locals': []}
